@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.UI; // Для работы с UI
 using UnityEngine.SceneManagement; // Подключаем SceneManager
 
 public class PlayerHealth : MonoBehaviour
@@ -7,10 +8,13 @@ public class PlayerHealth : MonoBehaviour
     public int maxLives = 3; // Максимальное количество жизней
     private int currentLives; // Текущее количество жизней
 
+    public Text livesText; // UI элемент для отображения жизней
+
     void Start()
     {
         // Устанавливаем начальное количество жизней
         currentLives = maxLives;
+        UpdateLivesUI(); // Обновляем UI
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -25,6 +29,7 @@ public class PlayerHealth : MonoBehaviour
     private void TakeDamage()
     {
         currentLives--; // Уменьшаем жизни на 1
+        UpdateLivesUI(); // Обновляем UI
         Debug.Log($"Player hit! Lives remaining: {currentLives}");
 
         if (currentLives <= 0)
@@ -36,7 +41,7 @@ public class PlayerHealth : MonoBehaviour
             // Проигрываем анимацию "ранения" (опционально)
             if (animator != null)
             {
-                //animator.SetTrigger("Hurt");
+                // animator.SetTrigger("Hurt");
             }
         }
     }
@@ -71,7 +76,17 @@ public class PlayerHealth : MonoBehaviour
         if (currentLives < maxLives)
         {
             currentLives++;
+            UpdateLivesUI(); // Обновляем UI
             Debug.Log($"Life added! Current lives: {currentLives}");
+        }
+    }
+
+    private void UpdateLivesUI()
+    {
+        // Обновляем текстовое поле
+        if (livesText != null)
+        {
+            livesText.text = $"Lives: {currentLives}";
         }
     }
 }
