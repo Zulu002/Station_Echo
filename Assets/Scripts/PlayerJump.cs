@@ -58,7 +58,7 @@ public class PlayerJump : MonoBehaviour
                     if (coyoteTimeCounter > 0f)
                     {
                         // Если мы находимся в кайоттайме, даем еще один дополнительный прыжок
-                        remainingJumps = maxAirJumps + 1;
+                        remainingJumps = maxAirJumps;
                     }
                     else if (remainingJumps > 0)
                     {
