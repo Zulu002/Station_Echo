@@ -10,12 +10,21 @@ public class PlayerJump : MonoBehaviour
     public Animator animator;
 
     // Настройки для кайоттайм
+    [Header("Настройки для кайот-тайм")]
     public float coyoteTime = 0.2f; // Время, в течение которого можно прыгать после потери контакта с землей
     private float coyoteTimeCounter; // Таймер кайоттайм
 
-    // Настройки для количества прыжков
+    
+    [Header("Настройки для количества прыжков")]
     public int maxAirJumps = 1; // Максимальное количество прыжков в воздухе
     private int remainingJumps; // Остаток прыжков
+
+    
+    [Header("Настройки для динамического прыжка")]
+    public float jumpTimeMax = 0.3f;       // Максимальное время удержания прыжка
+    public float jumpCutMultiplier = 3f;   // Усиление гравитации при раннем отпускании
+    private bool isJumping;
+    private float jumpTimeCounter;
 
     void Start()
     {
@@ -41,34 +50,69 @@ public class PlayerJump : MonoBehaviour
             coyoteTimeCounter -= Time.deltaTime; // Уменьшаем таймер, если персонаж в воздухе
         }
 
-        // Прыжок
+        // Начало прыжка
         if (Input.GetButtonDown("Jump"))
         {
-            // Прыжок возможен, если:
-            // - Остался время на кайоттайм (т.е. персонаж был на земле недавно)
-            // - Остались прыжки в воздухе
             if (coyoteTimeCounter > 0f || remainingJumps > 0)
             {
-                // Выполняем прыжок
-                rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
-
-                // Логика прыжков в воздухе с учетом кайоттайма
-                if (!isGrounded)
-                {
-                    if (coyoteTimeCounter > 0f)
-                    {
-                        // Если мы находимся в кайоттайме, даем еще один дополнительный прыжок
-                        remainingJumps = maxAirJumps;
-                    }
-                    else if (remainingJumps > 0)
-                    {
-                        remainingJumps--; // Обычный прыжок в воздухе
-                    }
-                }
-
-                // Обнуляем таймер кайоттайм, чтобы избежать двойного прыжка с земли
-                coyoteTimeCounter = 0f;
+                StartJump();
             }
+        }
+
+        // Продолжение прыжка (долгое удержание)
+        if (Input.GetButton("Jump") && isJumping)
+        {
+            ContinueJump();
+        }
+
+        // Преждевременное окончание прыжка
+        if (Input.GetButtonUp("Jump"))
+        {
+            EndJumpEarly();
+        }
+    }
+
+    private void StartJump()
+    {
+        isJumping = true;
+        jumpTimeCounter = jumpTimeMax;
+        rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
+
+        if (!isGrounded)
+        {
+            if (coyoteTimeCounter > 0f)
+            {
+                remainingJumps = maxAirJumps;
+            }
+            else if (remainingJumps > 0)
+            {
+                remainingJumps--;
+            }
+        }
+
+        coyoteTimeCounter = 0f; // Сброс таймера кайоттайм
+    }
+
+    private void ContinueJump()
+    {
+        if (jumpTimeCounter > 0)
+        {
+            rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
+            jumpTimeCounter -= Time.deltaTime;
+        }
+        else
+        {
+            isJumping = false;
+        }
+    }
+
+    private void EndJumpEarly()
+    {
+        isJumping = false;
+
+        if (rb.linearVelocity.y > 0)
+        {
+            rb.linearVelocity = new Vector2(rb.linearVelocity.x, rb.linearVelocity.y / jumpCutMultiplier);
         }
     }
 }

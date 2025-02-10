@@ -15578,6 +15578,8 @@ MonoBehaviour:
   animator: {fileID: 2008561644}
   coyoteTime: 0.2
   maxAirJumps: 1
+  jumpTimeMax: 0.1
+  jumpCutMultiplier: 3
 --- !u!95 &2008561644
 Animator:
   serializedVersion: 7
