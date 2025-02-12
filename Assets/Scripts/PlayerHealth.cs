@@ -19,10 +19,14 @@ public class PlayerHealth : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        // Проверяем, попал ли персонаж в объект с тегом "Hazard"
+       
         if (collision.gameObject.CompareTag("Hazard"))
         {
-            TakeDamage(); // Уменьшаем количество жизней
+            TakeDamage();
+        }
+        if (collision.gameObject.CompareTag("DeathZone"))
+        {
+            Die(); 
         }
     }
 

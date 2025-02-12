@@ -2,70 +2,81 @@ using UnityEngine;
 
 public class PlayerJump : MonoBehaviour
 {
-    public float jumpForce = 10f; // Сила прыжка
-    public Transform groundCheck; // Точка проверки земли
-    public LayerMask groundLayer; // Слой земли
+    public float jumpForce = 10f; // РЎРёР»Р° РїСЂС‹Р¶РєР°
+    public Transform groundCheck; // РўРѕС‡РєР° РїСЂРѕРІРµСЂРєРё Р·РµРјР»Рё
+    public LayerMask groundLayer; // РЎР»РѕР№ Р·РµРјР»Рё
     private Rigidbody2D rb;
     private bool isGrounded;
     public Animator animator;
 
-    // Настройки для кайоттайм
-    [Header("Настройки для кайот-тайм")]
-    public float coyoteTime = 0.2f; // Время, в течение которого можно прыгать после потери контакта с землей
-    private float coyoteTimeCounter; // Таймер кайоттайм
+    // РќР°СЃС‚СЂРѕР№РєРё РґР»СЏ РєР°Р№РѕС‚С‚Р°Р№Рј
+    [Header("РќР°СЃС‚СЂРѕР№РєРё РґР»СЏ РєР°Р№РѕС‚-С‚Р°Р№Рј")]
+    public float coyoteTime = 0.2f; // Р’СЂРµРјСЏ, РІ С‚РµС‡РµРЅРёРµ РєРѕС‚РѕСЂРѕРіРѕ РјРѕР¶РЅРѕ РїСЂС‹РіР°С‚СЊ РїРѕСЃР»Рµ РїРѕС‚РµСЂРё РєРѕРЅС‚Р°РєС‚Р° СЃ Р·РµРјР»РµР№
+    private float coyoteTimeCounter; // РўР°Р№РјРµСЂ РєР°Р№РѕС‚С‚Р°Р№Рј
 
-    
-    [Header("Настройки для количества прыжков")]
-    public int maxAirJumps = 1; // Максимальное количество прыжков в воздухе
-    private int remainingJumps; // Остаток прыжков
+    [Header("РќР°СЃС‚СЂРѕР№РєРё РґР»СЏ РєРѕР»РёС‡РµСЃС‚РІР° РїСЂС‹Р¶РєРѕРІ")]
+    public int maxAirJumps = 1; // РњР°РєСЃРёРјР°Р»СЊРЅРѕРµ РєРѕР»РёС‡РµСЃС‚РІРѕ РїСЂС‹Р¶РєРѕРІ РІ РІРѕР·РґСѓС…Рµ
+    private int remainingJumps; // РћСЃС‚Р°С‚РѕРє РїСЂС‹Р¶РєРѕРІ
 
-    
-    [Header("Настройки для динамического прыжка")]
-    public float jumpTimeMax = 0.3f;       // Максимальное время удержания прыжка
-    public float jumpCutMultiplier = 3f;   // Усиление гравитации при раннем отпускании
+    [Header("РќР°СЃС‚СЂРѕР№РєРё РґР»СЏ РґРёРЅР°РјРёС‡РµСЃРєРѕРіРѕ РїСЂС‹Р¶РєР°")]
+    public float jumpTimeMax = 0.3f; // РњР°РєСЃРёРјР°Р»СЊРЅРѕРµ РІСЂРµРјСЏ СѓРґРµСЂР¶Р°РЅРёСЏ РїСЂС‹Р¶РєР°
+    public float jumpCutMultiplier = 3f; // РЈСЃРёР»РµРЅРёРµ РіСЂР°РІРёС‚Р°С†РёРё РїСЂРё СЂР°РЅРЅРµРј РѕС‚РїСѓСЃРєР°РЅРёРё
     private bool isJumping;
     private float jumpTimeCounter;
+
+    private HungerSystem hungerSystem; // Р”РѕР±Р°РІР»СЏРµРј СЃСЃС‹Р»РєСѓ РЅР° HungerSystem
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        hungerSystem = GetComponent<HungerSystem>(); // РџРѕР»СѓС‡Р°РµРј РєРѕРјРїРѕРЅРµРЅС‚ HungerSystem
     }
 
     void Update()
     {
-        // Проверяем, находится ли персонаж на земле
+        // РџСЂРѕРІРµСЂСЏРµРј, РЅР°С…РѕРґРёС‚СЃСЏ Р»Рё РїРµСЂСЃРѕРЅР°Р¶ РЅР° Р·РµРјР»Рµ
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, 0.2f, groundLayer);
 
-        // Обновляем параметр анимации Jumping в аниматоре
-        animator.SetBool("Jumping", !isGrounded); // Прыжок: когда не на земле, анимация включена
+        // РћР±РЅРѕРІР»СЏРµРј РїР°СЂР°РјРµС‚СЂ Р°РЅРёРјР°С†РёРё Jumping РІ Р°РЅРёРјР°С‚РѕСЂРµ
+        animator.SetBool("Jumping", !isGrounded); // РџСЂС‹Р¶РѕРє: РєРѕРіРґР° РЅРµ РЅР° Р·РµРјР»Рµ, Р°РЅРёРјР°С†РёСЏ РІРєР»СЋС‡РµРЅР°
 
-        // Логика кайоттайм
+        // Р›РѕРіРёРєР° РєР°Р№РѕС‚С‚Р°Р№Рј
         if (isGrounded)
         {
-            coyoteTimeCounter = coyoteTime; // Если персонаж на земле, обновляем таймер
-            remainingJumps = maxAirJumps; // Сбрасываем оставшиеся прыжки
+            coyoteTimeCounter = coyoteTime; // Р•СЃР»Рё РїРµСЂСЃРѕРЅР°Р¶ РЅР° Р·РµРјР»Рµ, РѕР±РЅРѕРІР»СЏРµРј С‚Р°Р№РјРµСЂ
+            remainingJumps = maxAirJumps; // РЎР±СЂР°СЃС‹РІР°РµРј РѕСЃС‚Р°РІС€РёРµСЃСЏ РїСЂС‹Р¶РєРё
         }
         else
         {
-            coyoteTimeCounter -= Time.deltaTime; // Уменьшаем таймер, если персонаж в воздухе
+            coyoteTimeCounter -= Time.deltaTime; // РЈРјРµРЅСЊС€Р°РµРј С‚Р°Р№РјРµСЂ, РµСЃР»Рё РїРµСЂСЃРѕРЅР°Р¶ РІ РІРѕР·РґСѓС…Рµ
         }
 
-        // Начало прыжка
+        // РќР°С‡Р°Р»Рѕ РїСЂС‹Р¶РєР°
         if (Input.GetButtonDown("Jump"))
         {
-            if (coyoteTimeCounter > 0f || remainingJumps > 0)
+            // РџСЂРѕРІРµСЂСЏРµРј, РјРѕР¶РµРј Р»Рё РјС‹ РїСЂС‹РіРЅСѓС‚СЊ
+            if (isGrounded || coyoteTimeCounter > 0f || remainingJumps > 0)
             {
-                StartJump();
+                if (isGrounded || coyoteTimeCounter > 0f) // РџРµСЂРІС‹Р№ РїСЂС‹Р¶РѕРє РЅРµ С‚СЂР°С‚РёС‚ РІС‹РЅРѕСЃР»РёРІРѕСЃС‚СЊ
+                {
+                    StartJump();
+                }
+                else if (hungerSystem != null && hungerSystem.CanJump()) // Р’С‚РѕСЂРѕР№ РїСЂС‹Р¶РѕРє С‚СЂР°С‚РёС‚ РІС‹РЅРѕСЃР»РёРІРѕСЃС‚СЊ
+                {
+                    StartJump();
+                    hungerSystem.OnJump(); // РўСЂР°С‚РёРј РІС‹РЅРѕСЃР»РёРІРѕСЃС‚СЊ
+                }
+                
             }
         }
 
-        // Продолжение прыжка (долгое удержание)
+        // РџСЂРѕРґРѕР»Р¶РµРЅРёРµ РїСЂС‹Р¶РєР° (РґРѕР»РіРѕРµ СѓРґРµСЂР¶Р°РЅРёРµ)
         if (Input.GetButton("Jump") && isJumping)
         {
             ContinueJump();
         }
 
-        // Преждевременное окончание прыжка
+        // РџСЂРµР¶РґРµРІСЂРµРјРµРЅРЅРѕРµ РѕРєРѕРЅС‡Р°РЅРёРµ РїСЂС‹Р¶РєР°
         if (Input.GetButtonUp("Jump"))
         {
             EndJumpEarly();
@@ -76,28 +87,28 @@ public class PlayerJump : MonoBehaviour
     {
         isJumping = true;
         jumpTimeCounter = jumpTimeMax;
-        rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
+        rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce); // РџСЂРёРјРµРЅСЏРµРј СЃРёР»Сѓ Рє РІРµСЂС‚РёРєР°Р»СЊРЅРѕР№ СЃРєРѕСЂРѕСЃС‚Рё
 
         if (!isGrounded)
         {
             if (coyoteTimeCounter > 0f)
             {
-                remainingJumps = maxAirJumps;
+                remainingJumps = maxAirJumps; // РџРµСЂРµР·Р°РіСЂСѓР¶Р°РµРј РєРѕР»РёС‡РµСЃС‚РІРѕ РїСЂС‹Р¶РєРѕРІ РІ РІРѕР·РґСѓС…Рµ
             }
             else if (remainingJumps > 0)
             {
-                remainingJumps--;
+                remainingJumps--; // РЈРјРµРЅСЊС€Р°РµРј РєРѕР»РёС‡РµСЃС‚РІРѕ РѕСЃС‚Р°РІС€РёС…СЃСЏ РїСЂС‹Р¶РєРѕРІ
             }
         }
 
-        coyoteTimeCounter = 0f; // Сброс таймера кайоттайм
+        coyoteTimeCounter = 0f; // РЎР±СЂРѕСЃ С‚Р°Р№РјРµСЂР° РєР°Р№РѕС‚С‚Р°Р№Рј
     }
 
     private void ContinueJump()
     {
         if (jumpTimeCounter > 0)
         {
-            rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
+            rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce); // РџСЂРѕРґРѕР»Р¶Р°РµРј РїСЂС‹Р¶РѕРє
             jumpTimeCounter -= Time.deltaTime;
         }
         else
