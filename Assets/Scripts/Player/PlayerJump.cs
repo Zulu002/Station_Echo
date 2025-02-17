@@ -2,52 +2,56 @@ using UnityEngine;
 
 public class PlayerJump : MonoBehaviour
 {
+    // Публичные параметры прыжка
     public float jumpForce = 10f; // Сила прыжка
     public Transform groundCheck; // Точка проверки земли
     public LayerMask groundLayer; // Слой земли
-    private Rigidbody2D rb;
-    private bool isGrounded;
-    public Animator animator;
 
-    // Настройки для кайоттайм
+    // Внутренние переменные
+    private Rigidbody2D rb; // Физика персонажа
+    private bool isGrounded; // Проверка контакта с землей
+    public Animator animator; // Ссылка на аниматор
+
+    // Настройки для кайот-тайм
     [Header("Настройки для кайот-тайм")]
-    public float coyoteTime = 0.2f; // Время, в течение которого можно прыгать после потери контакта с землей
-    private float coyoteTimeCounter; // Таймер кайоттайм
+    public float coyoteTime = 0.2f; // Время, когда можно прыгнуть после ухода с платформы
+    private float coyoteTimeCounter; // Счетчик кайот-тайм
 
+    // Настройки для двойных прыжков
     [Header("Настройки для количества прыжков")]
-    public int maxAirJumps = 1; // Максимальное количество прыжков в воздухе
-    private int remainingJumps; // Остаток прыжков
+    public int maxAirJumps = 1; // Количество прыжков в воздухе
+    private int remainingJumps; // Сколько прыжков осталось
 
+    // Настройки для динамического прыжка
     [Header("Настройки для динамического прыжка")]
     public float jumpTimeMax = 0.3f; // Максимальное время удержания прыжка
-    public float jumpCutMultiplier = 3f; // Усиление гравитации при раннем отпускании
-    private bool isJumping;
-    private float jumpTimeCounter;
+    public float jumpCutMultiplier = 3f; // Множитель для прерывания прыжка
+    private bool isJumping; // Флаг активного прыжка
+    private float jumpTimeCounter; // Счетчик времени прыжка
 
-    private HungerSystem hungerSystem; // Добавляем ссылку на HungerSystem
-    private bool isJumpingUp = false; // Новый флаг для прыжка
+    // Ссылка на систему голода
+    private HungerSystem hungerSystem;
+    
 
     void Start()
     {
-        rb = GetComponent<Rigidbody2D>();
-        hungerSystem = GetComponent<HungerSystem>(); // Получаем компонент HungerSystem
+        rb = GetComponent<Rigidbody2D>(); // Инициализация физики
+        hungerSystem = GetComponent<HungerSystem>(); // Инициализация системы голода
     }
 
     void Update()
     {
-        // Проверяем, находится ли персонаж на земле
+        // Проверка земли
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, 0.2f, groundLayer);
 
-        // Обновляем параметр анимации Jumping (но только если именно прыжок, а не падение)
-        animator.SetBool("Jumping", isJumpingUp);
-
-        // Обновляем анимацию падения (когда падаем вниз)
+        // Обновляем параметры анимации
+        animator.SetBool("Jumping", !isGrounded && rb.linearVelocity.y > 0);
         animator.SetBool("Falling", !isGrounded && rb.linearVelocity.y < 0);
 
-        // Если персонаж на земле, сбрасываем флаг прыжка
+        // Сбрасываем счетчики при касании земли
         if (isGrounded)
         {
-            isJumpingUp = false;
+            
             coyoteTimeCounter = coyoteTime;
             remainingJumps = maxAirJumps;
         }
@@ -68,7 +72,7 @@ public class PlayerJump : MonoBehaviour
                 else if (hungerSystem != null && hungerSystem.CanJump())
                 {
                     StartJump();
-                    hungerSystem.OnJump();
+                    hungerSystem.OnJump(); // Уменьшаем сытость при прыжке
                 }
             }
         }
@@ -79,7 +83,7 @@ public class PlayerJump : MonoBehaviour
             ContinueJump();
         }
 
-        // Преждевременное окончание прыжка
+        // Прерывание прыжка
         if (Input.GetButtonUp("Jump"))
         {
             EndJumpEarly();
@@ -88,11 +92,12 @@ public class PlayerJump : MonoBehaviour
 
     private void StartJump()
     {
+        // Инициализируем прыжок
         isJumping = true;
-        isJumpingUp = true; // Устанавливаем флаг прыжка
         jumpTimeCounter = jumpTimeMax;
         rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
 
+        // Уменьшаем количество оставшихся прыжков, если находимся в воздухе
         if (!isGrounded)
         {
             if (coyoteTimeCounter > 0f)
@@ -105,14 +110,16 @@ public class PlayerJump : MonoBehaviour
             }
         }
 
+        // Обнуляем счетчик кайот-тайм
         coyoteTimeCounter = 0f;
     }
 
     private void ContinueJump()
     {
+        // Продолжаем прыжок, пока есть запас времени
         if (jumpTimeCounter > 0)
         {
-            rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce); // Продолжаем прыжок
+            rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
             jumpTimeCounter -= Time.deltaTime;
         }
         else
@@ -123,8 +130,8 @@ public class PlayerJump : MonoBehaviour
 
     private void EndJumpEarly()
     {
+        // Преждевременно заканчиваем прыжок
         isJumping = false;
-
         if (rb.linearVelocity.y > 0)
         {
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, rb.linearVelocity.y / jumpCutMultiplier);
