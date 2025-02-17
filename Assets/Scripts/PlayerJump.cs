@@ -25,6 +25,7 @@ public class PlayerJump : MonoBehaviour
     private float jumpTimeCounter;
 
     private HungerSystem hungerSystem; // Добавляем ссылку на HungerSystem
+    private bool isJumpingUp = false; // Новый флаг для прыжка
 
     void Start()
     {
@@ -37,40 +38,42 @@ public class PlayerJump : MonoBehaviour
         // Проверяем, находится ли персонаж на земле
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, 0.2f, groundLayer);
 
-        // Обновляем параметр анимации Jumping в аниматоре
-        animator.SetBool("Jumping", !isGrounded); // Прыжок: когда не на земле, анимация включена
+        // Обновляем параметр анимации Jumping (но только если именно прыжок, а не падение)
+        animator.SetBool("Jumping", isJumpingUp);
 
-        // Логика кайоттайм
+        // Обновляем анимацию падения (когда падаем вниз)
+        animator.SetBool("Falling", !isGrounded && rb.linearVelocity.y < 0);
+
+        // Если персонаж на земле, сбрасываем флаг прыжка
         if (isGrounded)
         {
-            coyoteTimeCounter = coyoteTime; // Если персонаж на земле, обновляем таймер
-            remainingJumps = maxAirJumps; // Сбрасываем оставшиеся прыжки
+            isJumpingUp = false;
+            coyoteTimeCounter = coyoteTime;
+            remainingJumps = maxAirJumps;
         }
         else
         {
-            coyoteTimeCounter -= Time.deltaTime; // Уменьшаем таймер, если персонаж в воздухе
+            coyoteTimeCounter -= Time.deltaTime;
         }
 
         // Начало прыжка
         if (Input.GetButtonDown("Jump"))
         {
-            // Проверяем, можем ли мы прыгнуть
             if (isGrounded || coyoteTimeCounter > 0f || remainingJumps > 0)
             {
-                if (isGrounded || coyoteTimeCounter > 0f) // Первый прыжок не тратит выносливость
+                if (isGrounded || coyoteTimeCounter > 0f)
                 {
                     StartJump();
                 }
-                else if (hungerSystem != null && hungerSystem.CanJump()) // Второй прыжок тратит выносливость
+                else if (hungerSystem != null && hungerSystem.CanJump())
                 {
                     StartJump();
-                    hungerSystem.OnJump(); // Тратим выносливость
+                    hungerSystem.OnJump();
                 }
-                
             }
         }
 
-        // Продолжение прыжка (долгое удержание)
+        // Продолжение прыжка
         if (Input.GetButton("Jump") && isJumping)
         {
             ContinueJump();
@@ -86,22 +89,23 @@ public class PlayerJump : MonoBehaviour
     private void StartJump()
     {
         isJumping = true;
+        isJumpingUp = true; // Устанавливаем флаг прыжка
         jumpTimeCounter = jumpTimeMax;
-        rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce); // Применяем силу к вертикальной скорости
+        rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
 
         if (!isGrounded)
         {
             if (coyoteTimeCounter > 0f)
             {
-                remainingJumps = maxAirJumps; // Перезагружаем количество прыжков в воздухе
+                remainingJumps = maxAirJumps;
             }
             else if (remainingJumps > 0)
             {
-                remainingJumps--; // Уменьшаем количество оставшихся прыжков
+                remainingJumps--;
             }
         }
 
-        coyoteTimeCounter = 0f; // Сброс таймера кайоттайм
+        coyoteTimeCounter = 0f;
     }
 
     private void ContinueJump()

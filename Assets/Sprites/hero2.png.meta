@@ -1,88 +1,76 @@
 fileFormatVersion: 2
-guid: bbba1764608bf8b439c34c5d5c203ef5
+guid: e64862bbfc02598458489452e64aea97
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 6755236944495837895
-    second: Thief_anim_0
+      213: 5785590968641933718
+    second: hero2_0
   - first:
-      213: 1300373889767536862
-    second: Thief_anim_1
+      213: 6003845326091150372
+    second: hero2_1
   - first:
-      213: 387545401630592209
-    second: Thief_anim_2
+      213: -2310467280609466074
+    second: hero2_2
   - first:
-      213: -5241432062873185174
-    second: Thief_anim_3
+      213: -6444751372224140236
+    second: hero2_3
   - first:
-      213: 8479310409311905083
-    second: Thief_anim_4
+      213: 8480487839521344445
+    second: hero2_4
   - first:
-      213: 8675652758758572945
-    second: Thief_anim_5
+      213: 1880302194739783558
+    second: hero2_5
   - first:
-      213: -4464978398210875841
-    second: Thief_anim_6
+      213: 8396914604597769717
+    second: hero2_6
   - first:
-      213: -7682311151808405615
-    second: Thief_anim_7
+      213: 5261738189688142756
+    second: hero2_7
   - first:
-      213: 4418460372479997312
-    second: Thief_anim_8
+      213: 3050141296318066050
+    second: hero2_8
   - first:
-      213: 3766401915370479263
-    second: Thief_anim_9
+      213: -9006550421598734850
+    second: hero2_9
   - first:
-      213: -548769422471903166
-    second: Thief_anim_10
+      213: 5571543297570056997
+    second: hero2_10
   - first:
-      213: -1224219979827581126
-    second: Thief_anim_11
+      213: 5614643042146947311
+    second: hero2_11
   - first:
-      213: 6638524944065617900
-    second: Thief_anim_12
+      213: 5531639334615762156
+    second: hero2_12
   - first:
-      213: 7663927831840159772
-    second: Thief_anim_13
+      213: 2988503612096915354
+    second: hero2_13
   - first:
-      213: -2512126230680521185
-    second: Thief_anim_14
+      213: 4058860158991049980
+    second: hero2_14
   - first:
-      213: -8176768326345040015
-    second: Thief_anim_15
+      213: 5170866054592065637
+    second: hero2_15
   - first:
-      213: 6807821570686303990
-    second: Thief_anim_16
+      213: -8385183812735224040
+    second: hero2_16
   - first:
-      213: -2924515395821035128
-    second: Thief_anim_17
+      213: -2102805184849606423
+    second: hero2_17
   - first:
-      213: -6234716004982188185
-    second: Thief_anim_18
+      213: 5012581549124463909
+    second: hero2_18
   - first:
-      213: -7969374441024623719
-    second: Thief_anim_19
+      213: -9122124993101973922
+    second: hero2_19
   - first:
-      213: -4193334918381656423
-    second: Thief_anim_20
+      213: -6550804618397883293
+    second: hero2_20
   - first:
-      213: 7748651078085666642
-    second: Thief_anim_21
+      213: 8739454758838273499
+    second: hero2_21
   - first:
-      213: 1692922124214254498
-    second: Thief_anim_22
-  - first:
-      213: 7326021230881228269
-    second: Thief_anim_23
-  - first:
-      213: 7112255661473173556
-    second: Thief_anim_24
-  - first:
-      213: -6609437680785238901
-    second: Thief_anim_25
-  - first:
-      213: 8042756605803503811
-    second: Thief_anim_26
+      213: 501776207318274141
+    second: hero2_22
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -129,7 +117,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 16
+  spritePixelsToUnits: 12
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -217,453 +205,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Thief_anim_0
+      name: hero2_0
       rect:
         serializedVersion: 2
-        x: 14
-        y: 127
-        width: 19
-        height: 18
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 7c20542d53c6fbd50800000000000000
-      internalID: 6755236944495837895
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Thief_anim_1
-      rect:
-        serializedVersion: 2
-        x: 62
-        y: 127
-        width: 19
-        height: 19
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: ed879ceb92bdb0210800000000000000
-      internalID: 1300373889767536862
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Thief_anim_2
-      rect:
-        serializedVersion: 2
-        x: 110
-        y: 127
-        width: 19
-        height: 19
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 1dc078e4d76d06500800000000000000
-      internalID: 387545401630592209
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Thief_anim_3
-      rect:
-        serializedVersion: 2
-        x: 158
-        y: 127
-        width: 19
-        height: 18
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: a64d9122f41b247b0800000000000000
-      internalID: -5241432062873185174
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Thief_anim_4
-      rect:
-        serializedVersion: 2
-        x: 206
-        y: 127
-        width: 19
-        height: 17
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: b35ee4754ef8ca570800000000000000
-      internalID: 8479310409311905083
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Thief_anim_5
-      rect:
-        serializedVersion: 2
-        x: 254
-        y: 127
-        width: 19
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 1934170f73c166870800000000000000
-      internalID: 8675652758758572945
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Thief_anim_6
-      rect:
-        serializedVersion: 2
-        x: 302
-        y: 127
-        width: 19
-        height: 17
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: f3e19d4adc53902c0800000000000000
-      internalID: -4464978398210875841
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Thief_anim_7
-      rect:
-        serializedVersion: 2
-        x: 350
-        y: 127
-        width: 19
-        height: 18
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 19f1076c5b2f26590800000000000000
-      internalID: -7682311151808405615
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Thief_anim_8
-      rect:
-        serializedVersion: 2
-        x: 13
+        x: 0
         y: 96
-        width: 21
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 0857fcb7c46815d30800000000000000
-      internalID: 4418460372479997312
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Thief_anim_9
-      rect:
-        serializedVersion: 2
-        x: 61
-        y: 97
-        width: 21
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: f9e12073692f44430800000000000000
-      internalID: 3766401915370479263
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Thief_anim_10
-      rect:
-        serializedVersion: 2
-        x: 109
-        y: 96
-        width: 21
-        height: 17
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 24847f52e116268f0800000000000000
-      internalID: -548769422471903166
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Thief_anim_11
-      rect:
-        serializedVersion: 2
-        x: 158
-        y: 95
-        width: 18
-        height: 17
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: a3fe07f1a62b20fe0800000000000000
-      internalID: -1224219979827581126
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Thief_anim_12
-      rect:
-        serializedVersion: 2
-        x: 208
-        y: 96
-        width: 15
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: cefd993a347c02c50800000000000000
-      internalID: 6638524944065617900
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Thief_anim_13
-      rect:
-        serializedVersion: 2
-        x: 257
-        y: 97
-        width: 14
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: c18ff0102cdbb5a60800000000000000
-      internalID: 7663927831840159772
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Thief_anim_14
-      rect:
-        serializedVersion: 2
-        x: 302
-        y: 95
-        width: 17
-        height: 17
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: f16b855c082232dd0800000000000000
-      internalID: -2512126230680521185
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Thief_anim_15
-      rect:
-        serializedVersion: 2
-        x: 15
-        y: 63
-        width: 18
-        height: 18
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 17fd9819788468e80800000000000000
-      internalID: -8176768326345040015
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Thief_anim_16
-      rect:
-        serializedVersion: 2
-        x: 62
-        y: 63
-        width: 19
-        height: 17
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 6febffe26ad3a7e50800000000000000
-      internalID: 6807821570686303990
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Thief_anim_17
-      rect:
-        serializedVersion: 2
-        x: 111
-        y: 63
-        width: 27
-        height: 17
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 8812de30eb80a67d0800000000000000
-      internalID: -2924515395821035128
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Thief_anim_18
-      rect:
-        serializedVersion: 2
-        x: 164
-        y: 63
-        width: 20
-        height: 17
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 767189f83d6d979a0800000000000000
-      internalID: -6234716004982188185
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Thief_anim_19
-      rect:
-        serializedVersion: 2
-        x: 213
-        y: 63
-        width: 20
-        height: 18
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 99b66a06b28176190800000000000000
-      internalID: -7969374441024623719
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Thief_anim_20
-      rect:
-        serializedVersion: 2
-        x: 257
-        y: 63
         width: 16
-        height: 18
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -672,20 +220,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 996ae95eb184ec5c0800000000000000
-      internalID: -4193334918381656423
+      spriteID: 6915c95255c8a4050800000000000000
+      internalID: 5785590968641933718
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Thief_anim_21
+      name: hero2_1
       rect:
         serializedVersion: 2
-        x: 12
-        y: 31
-        width: 21
-        height: 17
+        x: 16
+        y: 96
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -694,20 +242,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 2576eb5f91db88b60800000000000000
-      internalID: 7748651078085666642
+      spriteID: 4246d0ca381f15350800000000000000
+      internalID: 6003845326091150372
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Thief_anim_22
+      name: hero2_2
       rect:
         serializedVersion: 2
-        x: 57
-        y: 31
-        width: 25
-        height: 11
+        x: 32
+        y: 96
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -716,20 +264,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 2abb036d3b77e7710800000000000000
-      internalID: 1692922124214254498
+      spriteID: 6292c1aef329fefd0800000000000000
+      internalID: -2310467280609466074
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Thief_anim_23
+      name: hero2_3
       rect:
         serializedVersion: 2
-        x: 105
-        y: 31
-        width: 24
-        height: 12
+        x: 48
+        y: 96
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -738,20 +286,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: de545ab9e714ba560800000000000000
-      internalID: 7326021230881228269
+      spriteID: 43c6ed0d5c4af86a0800000000000000
+      internalID: -6444751372224140236
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Thief_anim_24
+      name: hero2_4
       rect:
         serializedVersion: 2
-        x: 152
-        y: 31
-        width: 24
-        height: 11
+        x: 0
+        y: 80
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -760,20 +308,350 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 4309edd77dec3b260800000000000000
-      internalID: 7112255661473173556
+      spriteID: dbb80bc22ceb0b570800000000000000
+      internalID: 8480487839521344445
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Thief_anim_25
+      name: hero2_5
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 80
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6872ad342ec281a10800000000000000
+      internalID: 1880302194739783558
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hero2_6
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 80
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5f5f6581855d78470800000000000000
+      internalID: 8396914604597769717
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hero2_7
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 80
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4abf7717103750940800000000000000
+      internalID: 5261738189688142756
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hero2_8
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 80
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 28da9c14957445a20800000000000000
+      internalID: 3050141296318066050
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hero2_9
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 80
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ef576fc3c1e420380800000000000000
+      internalID: -9006550421598734850
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hero2_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 64
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 52b2f5e1c19125d40800000000000000
+      internalID: 5571543297570056997
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hero2_11
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 64
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fe099c369183bed40800000000000000
+      internalID: 5614643042146947311
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hero2_12
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 64
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ce4c95dbaa454cc40800000000000000
+      internalID: 5531639334615762156
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hero2_13
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a972201933c497920800000000000000
+      internalID: 2988503612096915354
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hero2_14
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cf4a5a15fc7f35830800000000000000
+      internalID: 4058860158991049980
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hero2_15
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 560f51db74b92c740800000000000000
+      internalID: 5170866054592065637
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hero2_16
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 32
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 817bf89bfb7d1ab80800000000000000
+      internalID: -8385183812735224040
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hero2_17
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9e8803553d551d2e0800000000000000
+      internalID: -2102805184849606423
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hero2_18
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 52dad337c54409540800000000000000
+      internalID: 5012581549124463909
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hero2_19
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e56b17d56a3b76180800000000000000
+      internalID: -9122124993101973922
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hero2_20
       rect:
         serializedVersion: 2
         x: 16
         y: 0
-        width: 17
-        height: 17
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -782,20 +660,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: b84d6b7927f8644a0800000000000000
-      internalID: -6609437680785238901
+      spriteID: 364e76f38edd615a0800000000000000
+      internalID: -6550804618397883293
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Thief_anim_26
+      name: hero2_21
       rect:
         serializedVersion: 2
-        x: 64
+        x: 32
         y: 0
-        width: 17
-        height: 17
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -804,8 +682,118 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 3c028d7458c9d9f60800000000000000
-      internalID: 8042756605803503811
+      spriteID: bd5072facc7c84970800000000000000
+      internalID: 8739454758838273499
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hero2_22
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d50d2f15dcaa6f600800000000000000
+      internalID: 501776207318274141
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hero2_23
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8542bee6ff92bfe42b892a910c6f6e3b
+      internalID: 1190497685
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hero2_24
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 75efb5734dd51d443ac42b8680300c60
+      internalID: 1815740888
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hero2_25
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b2d2ae1e3406d6a44a0149bd6823b448
+      internalID: 399070974
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hero2_26
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df7f435d2723b0741a2358d88cf5fca4
+      internalID: -778792578
       vertices: []
       indices: 
       edges: []
@@ -814,7 +802,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: cd7b4dbd4a4081d4496ea0b778eb2b56
     internalID: 0
     vertices: []
     indices: 
@@ -824,33 +812,33 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Thief_anim_0: 6755236944495837895
-      Thief_anim_1: 1300373889767536862
-      Thief_anim_10: -548769422471903166
-      Thief_anim_11: -1224219979827581126
-      Thief_anim_12: 6638524944065617900
-      Thief_anim_13: 7663927831840159772
-      Thief_anim_14: -2512126230680521185
-      Thief_anim_15: -8176768326345040015
-      Thief_anim_16: 6807821570686303990
-      Thief_anim_17: -2924515395821035128
-      Thief_anim_18: -6234716004982188185
-      Thief_anim_19: -7969374441024623719
-      Thief_anim_2: 387545401630592209
-      Thief_anim_20: -4193334918381656423
-      Thief_anim_21: 7748651078085666642
-      Thief_anim_22: 1692922124214254498
-      Thief_anim_23: 7326021230881228269
-      Thief_anim_24: 7112255661473173556
-      Thief_anim_25: -6609437680785238901
-      Thief_anim_26: 8042756605803503811
-      Thief_anim_3: -5241432062873185174
-      Thief_anim_4: 8479310409311905083
-      Thief_anim_5: 8675652758758572945
-      Thief_anim_6: -4464978398210875841
-      Thief_anim_7: -7682311151808405615
-      Thief_anim_8: 4418460372479997312
-      Thief_anim_9: 3766401915370479263
+      hero2_0: 5785590968641933718
+      hero2_1: 6003845326091150372
+      hero2_10: 5571543297570056997
+      hero2_11: 5614643042146947311
+      hero2_12: 5531639334615762156
+      hero2_13: 2988503612096915354
+      hero2_14: 4058860158991049980
+      hero2_15: 5170866054592065637
+      hero2_16: -8385183812735224040
+      hero2_17: -2102805184849606423
+      hero2_18: 5012581549124463909
+      hero2_19: -9122124993101973922
+      hero2_2: -2310467280609466074
+      hero2_20: -6550804618397883293
+      hero2_21: 8739454758838273499
+      hero2_22: 501776207318274141
+      hero2_23: 1190497685
+      hero2_24: 1815740888
+      hero2_25: 399070974
+      hero2_26: -778792578
+      hero2_3: -6444751372224140236
+      hero2_4: 8480487839521344445
+      hero2_5: 1880302194739783558
+      hero2_6: 8396914604597769717
+      hero2_7: 5261738189688142756
+      hero2_8: 3050141296318066050
+      hero2_9: -9006550421598734850
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

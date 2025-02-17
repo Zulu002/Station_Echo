@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 
+
 public class HungerSystem : MonoBehaviour
 {
     public float maxHunger = 100f; // Максимальная сытость

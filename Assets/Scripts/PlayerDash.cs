@@ -9,6 +9,7 @@ public class PlayerDash : MonoBehaviour
     public float dashCooldown = 0.5f;
 
     private Rigidbody2D rb;
+    private Animator animator;
     private bool canDash = true;
     private bool isDashing;
     private float originalGravity;
@@ -17,6 +18,7 @@ public class PlayerDash : MonoBehaviour
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        animator = GetComponent<Animator>(); // Получаем компонент анимации
         originalGravity = rb.gravityScale;
         hungerSystem = GetComponent<HungerSystem>();
     }
@@ -34,6 +36,7 @@ public class PlayerDash : MonoBehaviour
         canDash = false;
         isDashing = true;
         rb.gravityScale = 0;
+        animator.SetBool("Dashing", true); // Включаем анимацию рывка
 
         hungerSystem.OnDash(); // Тратим сытость
 
@@ -50,8 +53,9 @@ public class PlayerDash : MonoBehaviour
 
         rb.linearVelocity = Vector2.zero;
         rb.gravityScale = originalGravity;
-
         isDashing = false;
+        animator.SetBool("Dashing", false); // Выключаем анимацию рывка
+
         yield return new WaitForSeconds(dashCooldown);
         canDash = true;
     }
