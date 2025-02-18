@@ -1,96 +1,70 @@
 using UnityEngine;
-using UnityEngine.UI; // Для работы с UI
-using UnityEngine.SceneManagement; // Подключаем SceneManager
+using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class PlayerHealth : MonoBehaviour
 {
-    public Animator animator; // Аниматор для анимации смерти
-    public int maxLives = 3; // Максимальное количество жизней
-    private int currentLives; // Текущее количество жизней
+    public Animator animator;
+    public int maxLives = 3;
+    private int currentLives;
 
-    public Text livesText; // UI элемент для отображения жизней
+    // Массив изображений для отображения жизней
+    public Image[] hearts;
 
     void Start()
     {
-        // Устанавливаем начальное количество жизней
         currentLives = maxLives;
-        UpdateLivesUI(); // Обновляем UI
+        UpdateLivesUI();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-       
-        if (collision.gameObject.CompareTag("Hazard"))
-        {
-            TakeDamage();
-        }
-        if (collision.gameObject.CompareTag("DeathZone"))
-        {
-            Die(); 
-        }
+        if (collision.CompareTag("Hazard")) TakeDamage();
+        if (collision.CompareTag("DeathZone")) Die();
     }
 
     private void TakeDamage()
     {
-        currentLives--; // Уменьшаем жизни на 1
-        UpdateLivesUI(); // Обновляем UI
+        currentLives--;
+        UpdateLivesUI();
         Debug.Log($"Player hit! Lives remaining: {currentLives}");
 
-        if (currentLives <= 0)
-        {
-            Die(); // Если жизни закончились, вызываем смерть
-        }
-        else
-        {
-            // Проигрываем анимацию "ранения" (опционально)
-            if (animator != null)
-            {
-                // animator.SetTrigger("Hurt");
-            }
-        }
+        if (currentLives <= 0) Die();
     }
 
     private void Die()
     {
         Debug.Log("Player Died");
 
-        // Проигрываем анимацию смерти
-        if (animator != null)
-        {
-            animator.SetTrigger("Death");
-        }
+        if (animator != null) animator.SetTrigger("Death");
 
-        // Отключаем управление персонажем
         GetComponent<PlayerMovement>().enabled = false;
         GetComponent<PlayerJump>().enabled = false;
 
-        // Перезапускаем уровень через 2 секунды
         Invoke("RestartLevel", 2f);
     }
 
     private void RestartLevel()
     {
-        // Перезагружаем текущую сцену
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
     public void AddLife()
     {
-        // Увеличиваем количество жизней, но не превышаем максимум
         if (currentLives < maxLives)
         {
             currentLives++;
-            UpdateLivesUI(); // Обновляем UI
+            UpdateLivesUI();
             Debug.Log($"Life added! Current lives: {currentLives}");
         }
     }
 
     private void UpdateLivesUI()
     {
-        // Обновляем текстовое поле
-        if (livesText != null)
+        // Перебираем сердечки и включаем только те, которые соответствуют текущему количеству жизней
+        for (int i = 0; i < hearts.Length; i++)
         {
-            livesText.text = $"Lives: {currentLives}";
+            hearts[i].enabled = i < currentLives;
         }
     }
 }
