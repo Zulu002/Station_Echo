@@ -15,7 +15,7 @@ public class HungerSystem : MonoBehaviour
     private PlayerDash playerDash;
     private PlayerJump playerJump;
 
-    public Slider hungerSlider; // UI-слайдер для шкалы сытости
+    public Image hungerImage; // Изображение шкалы сытости
 
     private void Start()
     {
@@ -23,13 +23,7 @@ public class HungerSystem : MonoBehaviour
         playerDash = GetComponent<PlayerDash>();
         playerJump = GetComponent<PlayerJump>();
 
-        // Инициализируем слайдер
-        if (hungerSlider != null)
-        {
-            hungerSlider.maxValue = maxHunger;
-            hungerSlider.value = currentHunger;
-            hungerSlider.direction = Slider.Direction.BottomToTop; // Вертикальное заполнение
-        }
+        UpdateHungerUI(); // Инициализируем изображение
     }
 
     private void Update()
@@ -40,11 +34,7 @@ public class HungerSystem : MonoBehaviour
             ReduceHunger(hungerDecreaseRate * Time.deltaTime);
         }
 
-        // Обновляем UI-слайдер
-        if (hungerSlider != null)
-        {
-            hungerSlider.value = currentHunger;
-        }
+        UpdateHungerUI(); // Обновляем UI каждый кадр
     }
 
     public void ReduceHunger(float amount)
@@ -73,13 +63,11 @@ public class HungerSystem : MonoBehaviour
 
     private void ApplyStarvationEffects()
     {
-        // Отключаем рывок при голоде
         playerDash.DisableDash();
     }
 
     private void ResetStats()
     {
-        // Включаем рывок обратно
         playerDash.EnableDash();
     }
 
@@ -106,6 +94,15 @@ public class HungerSystem : MonoBehaviour
         if (CanDash())
         {
             ReduceHunger(dashCost);
+        }
+    }
+
+    private void UpdateHungerUI()
+    {
+        if (hungerImage != null)
+        {
+            float alpha = currentHunger / maxHunger; // Вычисляем уровень прозрачности
+            hungerImage.color = new Color(hungerImage.color.r, hungerImage.color.g, hungerImage.color.b, alpha);
         }
     }
 }

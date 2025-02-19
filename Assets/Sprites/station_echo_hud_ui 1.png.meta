@@ -1,13 +1,19 @@
 fileFormatVersion: 2
-guid: da84faf4ce29f3a478f4d859d82e42ea
+guid: bb5b134bb6bd71248b2dc684f9e347f9
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -4764148791831280377
-    second: hearth_0
+      213: 5303746287218171582
+    second: station_echo_hud_ui 1_0
   - first:
-      213: -2107378289388702666
-    second: hearth_1
+      213: 3036687851580454870
+    second: station_echo_hud_ui 1_1
+  - first:
+      213: -8932967885651065521
+    second: station_echo_hud_ui 1_2
+  - first:
+      213: -5413003654174995296
+    second: station_echo_hud_ui 1_3
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -54,7 +60,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 16
+  spritePixelsToUnits: 64
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -142,45 +148,111 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: hearth_0
+      name: station_echo_hud_ui 1_0
       rect:
         serializedVersion: 2
-        x: 0
+        x: 16
         y: 16
-        width: 16
-        height: 16
+        width: 32
+        height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 7054ac55ae752edb0800000000000000
-      internalID: -4764148791831280377
+      spriteID: ebe9f64d521ba9940800000000000000
+      internalID: 5303746287218171582
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: hearth_1
+      name: station_echo_hud_ui 1_1
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 16
-        height: 16
+        x: 144
+        y: 16
+        width: 32
+        height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 634bd957c9611c2e0800000000000000
-      internalID: -2107378289388702666
+      spriteID: 6d7723f038b742a20800000000000000
+      internalID: 3036687851580454870
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: station_echo_hud_ui 1_2
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 24
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f45cbc17909b70480800000000000000
+      internalID: -8932967885651065521
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: station_echo_hud_ui 1_3
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 24
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0ac02091bd521e4b0800000000000000
+      internalID: -5413003654174995296
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: station_echo_hud_ui 1_4
+      rect:
+        serializedVersion: 2
+        x: 95
+        y: 16
+        width: 2
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5011ae3d3a9f7794781db1c6d15a2a21
+      internalID: 1514580932
       vertices: []
       indices: 
       edges: []
@@ -189,7 +261,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: b8ba3a87dc8bde24eb2e2d9e9df45d0b
+    spriteID: 6b75161d6f84d314fbee7c161f273609
     internalID: 0
     vertices: []
     indices: 
@@ -199,8 +271,11 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      hearth_0: -4764148791831280377
-      hearth_1: -2107378289388702666
+      station_echo_hud_ui 1_0: 5303746287218171582
+      station_echo_hud_ui 1_1: 3036687851580454870
+      station_echo_hud_ui 1_2: -8932967885651065521
+      station_echo_hud_ui 1_3: -5413003654174995296
+      station_echo_hud_ui 1_4: 1514580932
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
