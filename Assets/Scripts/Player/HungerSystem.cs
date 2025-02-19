@@ -1,7 +1,6 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-
 public class HungerSystem : MonoBehaviour
 {
     public float maxHunger = 100f; // Максимальная сытость
@@ -16,27 +15,35 @@ public class HungerSystem : MonoBehaviour
     private PlayerDash playerDash;
     private PlayerJump playerJump;
 
-    public Text hungerText; // UI-шкала сытости
+    public Slider hungerSlider; // UI-слайдер для шкалы сытости
 
     private void Start()
     {
         currentHunger = maxHunger;
         playerDash = GetComponent<PlayerDash>();
         playerJump = GetComponent<PlayerJump>();
+
+        // Инициализируем слайдер
+        if (hungerSlider != null)
+        {
+            hungerSlider.maxValue = maxHunger;
+            hungerSlider.value = currentHunger;
+            hungerSlider.direction = Slider.Direction.BottomToTop; // Вертикальное заполнение
+        }
     }
 
     private void Update()
     {
-        // Если персонаж двигается - тратим сытость
+        // Расход сытости при движении
         if (Mathf.Abs(GetComponent<Rigidbody2D>().linearVelocity.x) > 0.1f)
         {
             ReduceHunger(hungerDecreaseRate * Time.deltaTime);
         }
 
-        // Обновляем UI-шкалу сытости
-        if (hungerText != null)
+        // Обновляем UI-слайдер
+        if (hungerSlider != null)
         {
-            hungerText.text = "Hunger: " + Mathf.FloorToInt(currentHunger);
+            hungerSlider.value = currentHunger;
         }
     }
 
@@ -78,19 +85,18 @@ public class HungerSystem : MonoBehaviour
 
     public bool CanJump()
     {
-        return currentHunger > 0; // Разрешаем прыгать даже при 1 единице сытости
+        return currentHunger > 0;
     }
 
     public bool CanDash()
     {
-        return currentHunger > 0; // Разрешаем делать рывок при любом уровне сытости
+        return currentHunger > 0;
     }
 
     public void OnJump()
     {
         if (CanJump())
         {
-            // Используем столько сытости, сколько есть, для прыжка
             ReduceHunger(jumpCost);
         }
     }
@@ -99,7 +105,6 @@ public class HungerSystem : MonoBehaviour
     {
         if (CanDash())
         {
-            // Используем столько выносливости, сколько есть, для рывка
             ReduceHunger(dashCost);
         }
     }
