@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 958f75c0bb855c44aaa9e4c1c37cf7b3
+guid: ee49f2ebedebd0442b785fb89823d83e
 TextureImporter:
   internalIDToNameTable:
   - first:
@@ -41,39 +41,6 @@ TextureImporter:
   - first:
       213: 8740405812842701629
     second: Station-Echo-Tileset 1_12
-  - first:
-      213: -8669576089331169440
-    second: Station-Echo-Tileset 1_13
-  - first:
-      213: -3287894408257764948
-    second: Station-Echo-Tileset 1_14
-  - first:
-      213: -4449849847507785791
-    second: Station-Echo-Tileset 1_15
-  - first:
-      213: -665326129020731764
-    second: Station-Echo-Tileset 1_16
-  - first:
-      213: 3608786366214928950
-    second: Station-Echo-Tileset 1_17
-  - first:
-      213: 6965540486247411172
-    second: Station-Echo-Tileset 1_18
-  - first:
-      213: 9218044900828732341
-    second: Station-Echo-Tileset 1_19
-  - first:
-      213: -4612222037420328927
-    second: Station-Echo-Tileset 1_20
-  - first:
-      213: 7567367045196622700
-    second: Station-Echo-Tileset 1_21
-  - first:
-      213: 2071665264150207108
-    second: Station-Echo-Tileset 1_22
-  - first:
-      213: 78366016033372648
-    second: Station-Echo-Tileset 1_23
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -475,8 +442,8 @@ TextureImporter:
       name: Station-Echo-Tileset 1_12
       rect:
         serializedVersion: 2
-        x: 272
-        y: 224
+        x: 16
+        y: 208
         width: 16
         height: 16
       alignment: 0
@@ -497,8 +464,8 @@ TextureImporter:
       name: Station-Echo-Tileset 1_13
       rect:
         serializedVersion: 2
-        x: 288
-        y: 224
+        x: 32
+        y: 208
         width: 16
         height: 16
       alignment: 0
@@ -507,10 +474,10 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 067023aea7a7fa780800000000000000
-      internalID: -8669576089331169440
+      spriteID: c3f2163890336df4a9203bb5cb73c3ac
+      internalID: 763367075
       vertices: []
       indices: 
       edges: []
@@ -519,8 +486,8 @@ TextureImporter:
       name: Station-Echo-Tileset 1_14
       rect:
         serializedVersion: 2
-        x: 304
-        y: 224
+        x: 48
+        y: 208
         width: 16
         height: 16
       alignment: 0
@@ -529,10 +496,10 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: ca18dc8a47d0f52d0800000000000000
-      internalID: -3287894408257764948
+      spriteID: 48770c6c42deda842ac80e25428766cb
+      internalID: -2072033170
       vertices: []
       indices: 
       edges: []
@@ -541,8 +508,8 @@ TextureImporter:
       name: Station-Echo-Tileset 1_15
       rect:
         serializedVersion: 2
-        x: 336
-        y: 224
+        x: 80
+        y: 208
         width: 16
         height: 16
       alignment: 0
@@ -551,10 +518,10 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 1c7e877d325fe32c0800000000000000
-      internalID: -4449849847507785791
+      spriteID: 9d991ceeb17749d4abbcf56dae939ecd
+      internalID: -376353178
       vertices: []
       indices: 
       edges: []
@@ -563,8 +530,8 @@ TextureImporter:
       name: Station-Echo-Tileset 1_16
       rect:
         serializedVersion: 2
-        x: 352
-        y: 224
+        x: 96
+        y: 208
         width: 16
         height: 16
       alignment: 0
@@ -573,10 +540,10 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: c8efee3296944c6f0800000000000000
-      internalID: -665326129020731764
+      spriteID: 95e8c99302cb7734ebcd13840a8ca06e
+      internalID: -1485859213
       vertices: []
       indices: 
       edges: []
@@ -585,8 +552,8 @@ TextureImporter:
       name: Station-Echo-Tileset 1_17
       rect:
         serializedVersion: 2
-        x: 368
-        y: 224
+        x: 112
+        y: 208
         width: 16
         height: 16
       alignment: 0
@@ -595,10 +562,10 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 63a7384741cf41230800000000000000
-      internalID: 3608786366214928950
+      spriteID: 55bcad5f73ca5bd48b465f6f28127340
+      internalID: 1561483676
       vertices: []
       indices: 
       edges: []
@@ -607,8 +574,8 @@ TextureImporter:
       name: Station-Echo-Tileset 1_18
       rect:
         serializedVersion: 2
-        x: 384
-        y: 224
+        x: 144
+        y: 208
         width: 16
         height: 16
       alignment: 0
@@ -617,10 +584,10 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 4ede06fca229aa060800000000000000
-      internalID: 6965540486247411172
+      spriteID: c46e40e98fec3cf4eb570b016183d4fa
+      internalID: -1311019660
       vertices: []
       indices: 
       edges: []
@@ -629,8 +596,8 @@ TextureImporter:
       name: Station-Echo-Tileset 1_19
       rect:
         serializedVersion: 2
-        x: 400
-        y: 224
+        x: 160
+        y: 208
         width: 16
         height: 16
       alignment: 0
@@ -639,10 +606,10 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 5bb5f7d7ff21def70800000000000000
-      internalID: 9218044900828732341
+      spriteID: 92b982c35d44fdd468dc430edcb4c352
+      internalID: 1048559811
       vertices: []
       indices: 
       edges: []
@@ -651,8 +618,8 @@ TextureImporter:
       name: Station-Echo-Tileset 1_20
       rect:
         serializedVersion: 2
-        x: 432
-        y: 224
+        x: 176
+        y: 208
         width: 16
         height: 16
       alignment: 0
@@ -661,10 +628,10 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 128355a5e781effb0800000000000000
-      internalID: -4612222037420328927
+      spriteID: d975bd6b8a7fd2241969de3b1fb63442
+      internalID: -1040828435
       vertices: []
       indices: 
       edges: []
@@ -673,8 +640,8 @@ TextureImporter:
       name: Station-Echo-Tileset 1_21
       rect:
         serializedVersion: 2
-        x: 464
-        y: 224
+        x: 208
+        y: 208
         width: 16
         height: 16
       alignment: 0
@@ -683,10 +650,10 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: c6b21f5eb30b40960800000000000000
-      internalID: 7567367045196622700
+      spriteID: eecfb414e4934a642bc8c9dfbfc52aba
+      internalID: -1589971527
       vertices: []
       indices: 
       edges: []
@@ -695,7 +662,7 @@ TextureImporter:
       name: Station-Echo-Tileset 1_22
       rect:
         serializedVersion: 2
-        x: 16
+        x: 224
         y: 208
         width: 16
         height: 16
@@ -705,10 +672,10 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 48a5033e49800cc10800000000000000
-      internalID: 2071665264150207108
+      spriteID: bfe0fcafac42fb845baa1bffd1eeeee3
+      internalID: -1039019159
       vertices: []
       indices: 
       edges: []
@@ -717,7 +684,7 @@ TextureImporter:
       name: Station-Echo-Tileset 1_23
       rect:
         serializedVersion: 2
-        x: 32
+        x: 240
         y: 208
         width: 16
         height: 16
@@ -727,10 +694,10 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 8e9b124f979661100800000000000000
-      internalID: 78366016033372648
+      spriteID: 8312f0561daffc044a7ddad8157534f1
+      internalID: 428165580
       vertices: []
       indices: 
       edges: []
@@ -739,8 +706,8 @@ TextureImporter:
       name: Station-Echo-Tileset 1_24
       rect:
         serializedVersion: 2
-        x: 48
-        y: 208
+        x: 16
+        y: 192
         width: 16
         height: 16
       alignment: 0
@@ -751,8 +718,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 471884a85511feb408bccac7b14e31ee
-      internalID: -1152059326
+      spriteID: 9d031d23606b3f9439cef96984375e54
+      internalID: -1555428500
       vertices: []
       indices: 
       edges: []
@@ -761,8 +728,8 @@ TextureImporter:
       name: Station-Echo-Tileset 1_25
       rect:
         serializedVersion: 2
-        x: 80
-        y: 208
+        x: 32
+        y: 192
         width: 16
         height: 16
       alignment: 0
@@ -773,8 +740,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 565b30536ea1eac428bd2a4bc3b85dac
-      internalID: 925371513
+      spriteID: 69a7f216c205bd14189a267715aea209
+      internalID: -129359650
       vertices: []
       indices: 
       edges: []
@@ -783,8 +750,8 @@ TextureImporter:
       name: Station-Echo-Tileset 1_26
       rect:
         serializedVersion: 2
-        x: 96
-        y: 208
+        x: 48
+        y: 192
         width: 16
         height: 16
       alignment: 0
@@ -795,8 +762,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c142ff86e03871a4fa753182b60da081
-      internalID: -1940686918
+      spriteID: e3dc7713430454a42adf51c50083a2a9
+      internalID: 302563496
       vertices: []
       indices: 
       edges: []
@@ -805,336 +772,6 @@ TextureImporter:
       name: Station-Echo-Tileset 1_27
       rect:
         serializedVersion: 2
-        x: 112
-        y: 208
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b0bc8e34fae70224593d78db6bbbb6b3
-      internalID: 1126521351
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Station-Echo-Tileset 1_28
-      rect:
-        serializedVersion: 2
-        x: 144
-        y: 208
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 6d74cda41d7b0dc4790adce60f130566
-      internalID: 587005236
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Station-Echo-Tileset 1_29
-      rect:
-        serializedVersion: 2
-        x: 160
-        y: 208
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 5f9b3f6bcd2f19d40aa2e54889d4e7d8
-      internalID: 1203416653
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Station-Echo-Tileset 1_30
-      rect:
-        serializedVersion: 2
-        x: 176
-        y: 208
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3c4563e607db0d4408cf30f85594642b
-      internalID: -888332806
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Station-Echo-Tileset 1_31
-      rect:
-        serializedVersion: 2
-        x: 208
-        y: 208
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f343d3e20e421ae4ebc88c6b8ca11ea3
-      internalID: -132898755
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Station-Echo-Tileset 1_32
-      rect:
-        serializedVersion: 2
-        x: 224
-        y: 208
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 55dfa759cdd39ae4abe80942cd6c6ed7
-      internalID: -793485269
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Station-Echo-Tileset 1_33
-      rect:
-        serializedVersion: 2
-        x: 240
-        y: 208
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a0e474aa6a6ede94a953fdd0d335139c
-      internalID: -1676487477
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Station-Echo-Tileset 1_34
-      rect:
-        serializedVersion: 2
-        x: 272
-        y: 208
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e0d8480afdca07845b6b9da85a84c325
-      internalID: 314953285
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Station-Echo-Tileset 1_35
-      rect:
-        serializedVersion: 2
-        x: 288
-        y: 208
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ae87b444b2c00f54f877d20a2b04475c
-      internalID: -1642665152
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Station-Echo-Tileset 1_36
-      rect:
-        serializedVersion: 2
-        x: 304
-        y: 208
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 17de06ca39b7d23498eb214b0b58d576
-      internalID: -680013597
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Station-Echo-Tileset 1_37
-      rect:
-        serializedVersion: 2
-        x: 336
-        y: 208
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 438a0c78275bc634abad2d3bb2e05e0f
-      internalID: -1931878593
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Station-Echo-Tileset 1_38
-      rect:
-        serializedVersion: 2
-        x: 400
-        y: 208
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 522ca45130c427648aebdb990cf5d852
-      internalID: 1483906282
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Station-Echo-Tileset 1_39
-      rect:
-        serializedVersion: 2
-        x: 16
-        y: 192
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 42dd1a292a3ccaa449241ad588aba4e2
-      internalID: -1356866070
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Station-Echo-Tileset 1_40
-      rect:
-        serializedVersion: 2
-        x: 32
-        y: 192
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: fee1c06a7fe996545ae401ee00a9e290
-      internalID: -1466050323
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Station-Echo-Tileset 1_41
-      rect:
-        serializedVersion: 2
-        x: 48
-        y: 192
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7dd9c355dae448c45ab02ffa1c31f55e
-      internalID: 420793070
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Station-Echo-Tileset 1_42
-      rect:
-        serializedVersion: 2
         x: 80
         y: 192
         width: 16
@@ -1147,14 +784,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6b5149b953d60e64cb03b0473662ed03
-      internalID: -1692213516
+      spriteID: 68529c33d49a8de47a2190af7a9adda8
+      internalID: -1934735065
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Station-Echo-Tileset 1_43
+      name: Station-Echo-Tileset 1_28
       rect:
         serializedVersion: 2
         x: 96
@@ -1169,14 +806,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fa7150d31302492458b43f050e113191
-      internalID: -1829801853
+      spriteID: e44ae5eb5910cf94c97bde73589c3d12
+      internalID: -1639804070
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Station-Echo-Tileset 1_44
+      name: Station-Echo-Tileset 1_29
       rect:
         serializedVersion: 2
         x: 112
@@ -1191,14 +828,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a5d52a1be3d1b9548a1f43c9ae359ebf
-      internalID: 440194798
+      spriteID: d96be308a681bcb488d5737d27b63282
+      internalID: 860964097
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Station-Echo-Tileset 1_45
+      name: Station-Echo-Tileset 1_30
       rect:
         serializedVersion: 2
         x: 144
@@ -1213,14 +850,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5cf86e10494e9dc40a8cc02729c8675b
-      internalID: 923709295
+      spriteID: 8ff33d1ec48c03a449ab15aa0af9a049
+      internalID: -1458664784
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Station-Echo-Tileset 1_46
+      name: Station-Echo-Tileset 1_31
       rect:
         serializedVersion: 2
         x: 160
@@ -1235,14 +872,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: dac64ac6c7bb5e446b853675c99a568b
-      internalID: -1296930873
+      spriteID: 1baee3ce8ec69d24ea6b703a16c357bd
+      internalID: 1598194002
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Station-Echo-Tileset 1_47
+      name: Station-Echo-Tileset 1_32
       rect:
         serializedVersion: 2
         x: 176
@@ -1257,14 +894,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5fa1279c473a82f428d7023d27a8757f
-      internalID: 1927182613
+      spriteID: fcee0611ed049d14d88d5a7033ba4983
+      internalID: -247890281
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Station-Echo-Tileset 1_48
+      name: Station-Echo-Tileset 1_33
       rect:
         serializedVersion: 2
         x: 208
@@ -1279,14 +916,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 743a1b00d3d22144180db890238052c6
-      internalID: -896733679
+      spriteID: 1949458fbef49144fa3311963ad7ced8
+      internalID: -831034626
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Station-Echo-Tileset 1_49
+      name: Station-Echo-Tileset 1_34
       rect:
         serializedVersion: 2
         x: 224
@@ -1301,14 +938,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4c77546ecfce0504db18c557e0925744
-      internalID: 1503236191
+      spriteID: 78eff333d6f5e1c4c8c68fad95e2beb3
+      internalID: 1363736275
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Station-Echo-Tileset 1_50
+      name: Station-Echo-Tileset 1_35
       rect:
         serializedVersion: 2
         x: 240
@@ -1323,8 +960,338 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 489cb3a647329a8408edda76d9180e15
-      internalID: -571933219
+      spriteID: 8f75bfbfce1135c44bcf1a349b6a2c62
+      internalID: 575006633
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Station-Echo-Tileset 1_36
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 160
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9047e447f53b44347a06d17b887651fa
+      internalID: 1721758537
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Station-Echo-Tileset 1_37
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 160
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 24d6d8ce0fcac6540ab09380588481fe
+      internalID: -536810337
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Station-Echo-Tileset 1_38
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 160
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7fedfc0522234d047a3a1a8b1637c698
+      internalID: 186372587
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Station-Echo-Tileset 1_39
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 160
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2642ea289feef7e4d96188c3af9f1eda
+      internalID: 1749674248
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Station-Echo-Tileset 1_40
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 160
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3c533795c93c7f4398b96d9b9d0de26
+      internalID: -227352989
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Station-Echo-Tileset 1_41
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 160
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fcf06afe3efb94f488aec9feebbd61b4
+      internalID: -895218570
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Station-Echo-Tileset 1_42
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 160
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e01911cae5959ec479dd3ad9a7c2e629
+      internalID: 1209257513
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Station-Echo-Tileset 1_43
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 160
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c7229d9dfd8acf4a9de4151e06fb002
+      internalID: -87533721
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Station-Echo-Tileset 1_44
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 160
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e1bf608618531d7479576a013bf4a581
+      internalID: -1544958097
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Station-Echo-Tileset 1_45
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 160
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: efa980b90c1ad3a4dba22bc004dace26
+      internalID: 188556279
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Station-Echo-Tileset 1_46
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 160
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 18b3756c9ef27f94f9209ec22c63abef
+      internalID: -495814963
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Station-Echo-Tileset 1_47
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 160
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a48e20c96dafe4c4db269936ce34dc17
+      internalID: -1084263415
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Station-Echo-Tileset 1_48
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 160
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea1d275a5934d3440a1ccdb755252f6e
+      internalID: -1212705458
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Station-Echo-Tileset 1_49
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 144
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f6704accf067e248bc456985c7a40d2
+      internalID: 610043077
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Station-Echo-Tileset 1_50
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 144
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1fa093052221ede4da4c403a0f288704
+      internalID: 1242174934
       vertices: []
       indices: 
       edges: []
@@ -1333,8 +1300,8 @@ TextureImporter:
       name: Station-Echo-Tileset 1_51
       rect:
         serializedVersion: 2
-        x: 272
-        y: 192
+        x: 64
+        y: 144
         width: 16
         height: 16
       alignment: 0
@@ -1345,8 +1312,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 796a846c04a855d47877c409c8bb21fd
-      internalID: 1281016516
+      spriteID: f95bb6c43e38d924fb3498abfe0c91a3
+      internalID: 1526018476
       vertices: []
       indices: 
       edges: []
@@ -1355,8 +1322,8 @@ TextureImporter:
       name: Station-Echo-Tileset 1_52
       rect:
         serializedVersion: 2
-        x: 288
-        y: 192
+        x: 80
+        y: 144
         width: 16
         height: 16
       alignment: 0
@@ -1367,8 +1334,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 30c36c0d6a9c8ff43905a1588a0f5f31
-      internalID: 1450245166
+      spriteID: de0a51fad7f91ae4ea10e54247efbc53
+      internalID: 1064007222
       vertices: []
       indices: 
       edges: []
@@ -1377,8 +1344,8 @@ TextureImporter:
       name: Station-Echo-Tileset 1_53
       rect:
         serializedVersion: 2
-        x: 304
-        y: 192
+        x: 112
+        y: 144
         width: 16
         height: 16
       alignment: 0
@@ -1389,8 +1356,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9bdc20732f4e870439e5178a6ea5f557
-      internalID: 803168318
+      spriteID: 4606e7eb20d9f1447969bc959e40e7e4
+      internalID: 1476028060
       vertices: []
       indices: 
       edges: []
@@ -1399,8 +1366,8 @@ TextureImporter:
       name: Station-Echo-Tileset 1_54
       rect:
         serializedVersion: 2
-        x: 336
-        y: 192
+        x: 128
+        y: 144
         width: 16
         height: 16
       alignment: 0
@@ -1411,8 +1378,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7a3e20b4b83d6fe409dc98e0ac7dc1f7
-      internalID: -1134154646
+      spriteID: e7eacc9d4e9f40c42b08761466171a89
+      internalID: 247112302
       vertices: []
       indices: 
       edges: []
@@ -1421,8 +1388,8 @@ TextureImporter:
       name: Station-Echo-Tileset 1_55
       rect:
         serializedVersion: 2
-        x: 400
-        y: 192
+        x: 160
+        y: 144
         width: 16
         height: 16
       alignment: 0
@@ -1433,8 +1400,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 369b32b1905739048ae7af3c899e4a97
-      internalID: 1059385246
+      spriteID: 84f9c06b547226947a5177af5a507543
+      internalID: -2031694349
       vertices: []
       indices: 
       edges: []
@@ -1443,8 +1410,8 @@ TextureImporter:
       name: Station-Echo-Tileset 1_56
       rect:
         serializedVersion: 2
-        x: 432
-        y: 192
+        x: 176
+        y: 144
         width: 16
         height: 16
       alignment: 0
@@ -1455,8 +1422,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2762a0fb2ee04e24584b5667c6304e4c
-      internalID: 1350815685
+      spriteID: 9e95db7a05525f548a8b0036fb5bc112
+      internalID: 1188171114
       vertices: []
       indices: 
       edges: []
@@ -1465,8 +1432,8 @@ TextureImporter:
       name: Station-Echo-Tileset 1_57
       rect:
         serializedVersion: 2
-        x: 16
-        y: 160
+        x: 208
+        y: 144
         width: 16
         height: 16
       alignment: 0
@@ -1477,8 +1444,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7b0c8bbd2b38cef4daa66feafd03c0f2
-      internalID: -1479335497
+      spriteID: 529a396ea79d90949ab0e7fc9aea6e43
+      internalID: -1461541033
       vertices: []
       indices: 
       edges: []
@@ -1487,8 +1454,8 @@ TextureImporter:
       name: Station-Echo-Tileset 1_58
       rect:
         serializedVersion: 2
-        x: 32
-        y: 160
+        x: 224
+        y: 144
         width: 16
         height: 16
       alignment: 0
@@ -1499,8 +1466,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 894a2c6484be68f419e885bb79c8d551
-      internalID: 214022970
+      spriteID: 92ebe86454c61cb4aa9f7c3a31921d1d
+      internalID: -834705695
       vertices: []
       indices: 
       edges: []
@@ -1509,8 +1476,8 @@ TextureImporter:
       name: Station-Echo-Tileset 1_59
       rect:
         serializedVersion: 2
-        x: 64
-        y: 160
+        x: 16
+        y: 112
         width: 16
         height: 16
       alignment: 0
@@ -1521,8 +1488,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a0ad43f90818b5d47830f36bcbb33951
-      internalID: 1376495813
+      spriteID: 1b435a27343dbfc4389605e5784eeee2
+      internalID: 1431479142
       vertices: []
       indices: 
       edges: []
@@ -1531,8 +1498,8 @@ TextureImporter:
       name: Station-Echo-Tileset 1_60
       rect:
         serializedVersion: 2
-        x: 80
-        y: 160
+        x: 64
+        y: 112
         width: 16
         height: 16
       alignment: 0
@@ -1543,8 +1510,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c6d7c964a62f73a44b156d32e3c367d1
-      internalID: -837084004
+      spriteID: c722ce445dac51444854f038acd60ea3
+      internalID: -164721017
       vertices: []
       indices: 
       edges: []
@@ -1553,8 +1520,8 @@ TextureImporter:
       name: Station-Echo-Tileset 1_61
       rect:
         serializedVersion: 2
-        x: 112
-        y: 160
+        x: 0
+        y: 96
         width: 16
         height: 16
       alignment: 0
@@ -1565,8 +1532,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a1b8266ff21cdbd449943812752ce0f4
-      internalID: -1889323202
+      spriteID: 2ae1755a557deaf4e859bd7cbeb9d6d0
+      internalID: -1940323166
       vertices: []
       indices: 
       edges: []
@@ -1575,8 +1542,8 @@ TextureImporter:
       name: Station-Echo-Tileset 1_62
       rect:
         serializedVersion: 2
-        x: 128
-        y: 160
+        x: 32
+        y: 96
         width: 16
         height: 16
       alignment: 0
@@ -1587,8 +1554,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4e114dba3350cb946abc88d31ad000fd
-      internalID: 1374936984
+      spriteID: 907b5179bc172c348b2d60a0fc23209e
+      internalID: 1792525001
       vertices: []
       indices: 
       edges: []
@@ -1597,8 +1564,8 @@ TextureImporter:
       name: Station-Echo-Tileset 1_63
       rect:
         serializedVersion: 2
-        x: 160
-        y: 160
+        x: 48
+        y: 96
         width: 16
         height: 16
       alignment: 0
@@ -1609,8 +1576,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a1cdf4e8b25c2194b9d1cc8b24e254fb
-      internalID: 1781829476
+      spriteID: fd5b9e58248e5ab40ad634d984aa9d8b
+      internalID: -2130073967
       vertices: []
       indices: 
       edges: []
@@ -1619,8 +1586,8 @@ TextureImporter:
       name: Station-Echo-Tileset 1_64
       rect:
         serializedVersion: 2
-        x: 176
-        y: 160
+        x: 80
+        y: 96
         width: 16
         height: 16
       alignment: 0
@@ -1631,8 +1598,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2040c46dc726bd6498a973c935d0a859
-      internalID: 1598619304
+      spriteID: b29af1c4fbd467348829c2bf0b86042a
+      internalID: 75253960
       vertices: []
       indices: 
       edges: []
@@ -1641,8 +1608,8 @@ TextureImporter:
       name: Station-Echo-Tileset 1_65
       rect:
         serializedVersion: 2
-        x: 208
-        y: 160
+        x: 16
+        y: 80
         width: 16
         height: 16
       alignment: 0
@@ -1653,8 +1620,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bfcdaf3bdf921584ea9ab6754e588e0c
-      internalID: -190670592
+      spriteID: 60232f78a4e3a41479d6c5edac8244bd
+      internalID: -432103923
       vertices: []
       indices: 
       edges: []
@@ -1663,579 +1630,7 @@ TextureImporter:
       name: Station-Echo-Tileset 1_66
       rect:
         serializedVersion: 2
-        x: 224
-        y: 160
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 27752d0c24621ee43904f28493db18aa
-      internalID: 475680902
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Station-Echo-Tileset 1_67
-      rect:
-        serializedVersion: 2
-        x: 336
-        y: 160
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 6614de3e10dd59242a341923eab80e4a
-      internalID: -1455853981
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Station-Echo-Tileset 1_68
-      rect:
-        serializedVersion: 2
-        x: 352
-        y: 160
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 003111baee5d02f499d659e84f1c8aae
-      internalID: -2051397065
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Station-Echo-Tileset 1_69
-      rect:
-        serializedVersion: 2
-        x: 368
-        y: 160
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 15b7190c29a3611498dda02750754e98
-      internalID: -11549113
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Station-Echo-Tileset 1_70
-      rect:
-        serializedVersion: 2
-        x: 384
-        y: 160
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 61c1f17a22776664aa747e39af29a312
-      internalID: -1710157676
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Station-Echo-Tileset 1_71
-      rect:
-        serializedVersion: 2
-        x: 400
-        y: 160
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d3ff8b1e223b0a4439101eda7f25fc18
-      internalID: -1520784501
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Station-Echo-Tileset 1_72
-      rect:
-        serializedVersion: 2
-        x: 16
-        y: 144
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 997c091a9fe22f846acfec0b53451e7e
-      internalID: -1921966569
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Station-Echo-Tileset 1_73
-      rect:
-        serializedVersion: 2
-        x: 32
-        y: 144
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 68093fc3234a9564db5d9878353988c0
-      internalID: -605803410
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Station-Echo-Tileset 1_74
-      rect:
-        serializedVersion: 2
         x: 64
-        y: 144
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 4aae64cdc12b18647b750be921599240
-      internalID: -1332530431
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Station-Echo-Tileset 1_75
-      rect:
-        serializedVersion: 2
-        x: 80
-        y: 144
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f039be89070894a47acf424225130619
-      internalID: -916552542
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Station-Echo-Tileset 1_76
-      rect:
-        serializedVersion: 2
-        x: 112
-        y: 144
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 35b49736e79e91f45b4da2dcde561d55
-      internalID: -1790781203
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Station-Echo-Tileset 1_77
-      rect:
-        serializedVersion: 2
-        x: 128
-        y: 144
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: fb4a40252c666f04994df7080ab1d4cd
-      internalID: -1138510476
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Station-Echo-Tileset 1_78
-      rect:
-        serializedVersion: 2
-        x: 160
-        y: 144
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 2bcb28f4c6f03fd4c973b7950be73e98
-      internalID: -1181897542
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Station-Echo-Tileset 1_79
-      rect:
-        serializedVersion: 2
-        x: 176
-        y: 144
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 621f6f6ad3a3b604089e288a8fc57769
-      internalID: 548797491
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Station-Echo-Tileset 1_80
-      rect:
-        serializedVersion: 2
-        x: 208
-        y: 144
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: aff22d60fa015654780b299f00d3f289
-      internalID: 1222758
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Station-Echo-Tileset 1_81
-      rect:
-        serializedVersion: 2
-        x: 224
-        y: 144
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0ad12483c56c13a4fa099b2fc43bf765
-      internalID: -1262154677
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Station-Echo-Tileset 1_82
-      rect:
-        serializedVersion: 2
-        x: 16
-        y: 112
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 43622d65846f671429a38c357b9c0237
-      internalID: 1923007521
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Station-Echo-Tileset 1_83
-      rect:
-        serializedVersion: 2
-        x: 32
-        y: 112
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 20381ba95e67fec46adef5a400261514
-      internalID: 893795921
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Station-Echo-Tileset 1_84
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 112
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ea7de54cecbcd444fba43ce361731505
-      internalID: -28149683
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Station-Echo-Tileset 1_85
-      rect:
-        serializedVersion: 2
-        x: 80
-        y: 112
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7112239cf1e2bf744afeaf95c8c8c2fc
-      internalID: -1622688756
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Station-Echo-Tileset 1_86
-      rect:
-        serializedVersion: 2
-        x: 112
-        y: 112
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 2bb13469f0ddcfc4dbdec5ba812f2975
-      internalID: -71351724
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Station-Echo-Tileset 1_87
-      rect:
-        serializedVersion: 2
-        x: 128
-        y: 112
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 5ddcd6044c924f34a9a9347e4ca57814
-      internalID: 285000779
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Station-Echo-Tileset 1_88
-      rect:
-        serializedVersion: 2
-        x: 160
-        y: 112
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 2dcad067b6feb2b4bb8d4fed7c633331
-      internalID: -1413876551
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Station-Echo-Tileset 1_89
-      rect:
-        serializedVersion: 2
-        x: 176
-        y: 112
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3406b51cdc654d64f98adbad35e52a63
-      internalID: 919453002
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Station-Echo-Tileset 1_90
-      rect:
-        serializedVersion: 2
-        x: 208
-        y: 112
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 36ee96ba007182e419bd7f8fa2609987
-      internalID: -305756824
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Station-Echo-Tileset 1_91
-      rect:
-        serializedVersion: 2
-        x: 224
-        y: 112
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 84dc9d56c16477d4c87289ef867fee8b
-      internalID: -417431072
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Station-Echo-Tileset 1_92
-      rect:
-        serializedVersion: 2
-        x: 16
         y: 80
         width: 16
         height: 16
@@ -2247,74 +1642,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 308ae5e5ceeffc647b3303abbac49295
-      internalID: 1397155123
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Station-Echo-Tileset 1_93
-      rect:
-        serializedVersion: 2
-        x: 48
-        y: 80
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 38b605960d8afc546974a48cf4b8a5a4
-      internalID: 342540854
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Station-Echo-Tileset 1_94
-      rect:
-        serializedVersion: 2
-        x: 80
-        y: 80
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 165caaf019a2abb48a52ba2d86030877
-      internalID: -552354436
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Station-Echo-Tileset 1_95
-      rect:
-        serializedVersion: 2
-        x: 112
-        y: 80
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: aa09c776b45b5a840a2c06d2786c77b2
-      internalID: 1882156662
+      spriteID: d81d6055ac44e9a4e8427ee17e8ce557
+      internalID: -324085486
       vertices: []
       indices: 
       edges: []
@@ -2323,7 +1652,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: d244dc9ed6911bf49aa0ed339c5b1d67
+    spriteID: 8727daa25344908408690018e179e061
     internalID: 0
     vertices: []
     indices: 
@@ -2338,97 +1667,68 @@ TextureImporter:
       Station-Echo-Tileset 1_10: 5639704478153636991
       Station-Echo-Tileset 1_11: -5224350200516612857
       Station-Echo-Tileset 1_12: 8740405812842701629
-      Station-Echo-Tileset 1_13: -8669576089331169440
-      Station-Echo-Tileset 1_14: -3287894408257764948
-      Station-Echo-Tileset 1_15: -4449849847507785791
-      Station-Echo-Tileset 1_16: -665326129020731764
-      Station-Echo-Tileset 1_17: 3608786366214928950
-      Station-Echo-Tileset 1_18: 6965540486247411172
-      Station-Echo-Tileset 1_19: 9218044900828732341
+      Station-Echo-Tileset 1_13: 763367075
+      Station-Echo-Tileset 1_14: -2072033170
+      Station-Echo-Tileset 1_15: -376353178
+      Station-Echo-Tileset 1_16: -1485859213
+      Station-Echo-Tileset 1_17: 1561483676
+      Station-Echo-Tileset 1_18: -1311019660
+      Station-Echo-Tileset 1_19: 1048559811
       Station-Echo-Tileset 1_2: 1177089648929799653
-      Station-Echo-Tileset 1_20: -4612222037420328927
-      Station-Echo-Tileset 1_21: 7567367045196622700
-      Station-Echo-Tileset 1_22: 2071665264150207108
-      Station-Echo-Tileset 1_23: 78366016033372648
-      Station-Echo-Tileset 1_24: -1152059326
-      Station-Echo-Tileset 1_25: 925371513
-      Station-Echo-Tileset 1_26: -1940686918
-      Station-Echo-Tileset 1_27: 1126521351
-      Station-Echo-Tileset 1_28: 587005236
-      Station-Echo-Tileset 1_29: 1203416653
+      Station-Echo-Tileset 1_20: -1040828435
+      Station-Echo-Tileset 1_21: -1589971527
+      Station-Echo-Tileset 1_22: -1039019159
+      Station-Echo-Tileset 1_23: 428165580
+      Station-Echo-Tileset 1_24: -1555428500
+      Station-Echo-Tileset 1_25: -129359650
+      Station-Echo-Tileset 1_26: 302563496
+      Station-Echo-Tileset 1_27: -1934735065
+      Station-Echo-Tileset 1_28: -1639804070
+      Station-Echo-Tileset 1_29: 860964097
       Station-Echo-Tileset 1_3: 6366567636155558266
-      Station-Echo-Tileset 1_30: -888332806
-      Station-Echo-Tileset 1_31: -132898755
-      Station-Echo-Tileset 1_32: -793485269
-      Station-Echo-Tileset 1_33: -1676487477
-      Station-Echo-Tileset 1_34: 314953285
-      Station-Echo-Tileset 1_35: -1642665152
-      Station-Echo-Tileset 1_36: -680013597
-      Station-Echo-Tileset 1_37: -1931878593
-      Station-Echo-Tileset 1_38: 1483906282
-      Station-Echo-Tileset 1_39: -1356866070
+      Station-Echo-Tileset 1_30: -1458664784
+      Station-Echo-Tileset 1_31: 1598194002
+      Station-Echo-Tileset 1_32: -247890281
+      Station-Echo-Tileset 1_33: -831034626
+      Station-Echo-Tileset 1_34: 1363736275
+      Station-Echo-Tileset 1_35: 575006633
+      Station-Echo-Tileset 1_36: 1721758537
+      Station-Echo-Tileset 1_37: -536810337
+      Station-Echo-Tileset 1_38: 186372587
+      Station-Echo-Tileset 1_39: 1749674248
       Station-Echo-Tileset 1_4: -842823506083574640
-      Station-Echo-Tileset 1_40: -1466050323
-      Station-Echo-Tileset 1_41: 420793070
-      Station-Echo-Tileset 1_42: -1692213516
-      Station-Echo-Tileset 1_43: -1829801853
-      Station-Echo-Tileset 1_44: 440194798
-      Station-Echo-Tileset 1_45: 923709295
-      Station-Echo-Tileset 1_46: -1296930873
-      Station-Echo-Tileset 1_47: 1927182613
-      Station-Echo-Tileset 1_48: -896733679
-      Station-Echo-Tileset 1_49: 1503236191
+      Station-Echo-Tileset 1_40: -227352989
+      Station-Echo-Tileset 1_41: -895218570
+      Station-Echo-Tileset 1_42: 1209257513
+      Station-Echo-Tileset 1_43: -87533721
+      Station-Echo-Tileset 1_44: -1544958097
+      Station-Echo-Tileset 1_45: 188556279
+      Station-Echo-Tileset 1_46: -495814963
+      Station-Echo-Tileset 1_47: -1084263415
+      Station-Echo-Tileset 1_48: -1212705458
+      Station-Echo-Tileset 1_49: 610043077
       Station-Echo-Tileset 1_5: 2085654721137751476
-      Station-Echo-Tileset 1_50: -571933219
-      Station-Echo-Tileset 1_51: 1281016516
-      Station-Echo-Tileset 1_52: 1450245166
-      Station-Echo-Tileset 1_53: 803168318
-      Station-Echo-Tileset 1_54: -1134154646
-      Station-Echo-Tileset 1_55: 1059385246
-      Station-Echo-Tileset 1_56: 1350815685
-      Station-Echo-Tileset 1_57: -1479335497
-      Station-Echo-Tileset 1_58: 214022970
-      Station-Echo-Tileset 1_59: 1376495813
+      Station-Echo-Tileset 1_50: 1242174934
+      Station-Echo-Tileset 1_51: 1526018476
+      Station-Echo-Tileset 1_52: 1064007222
+      Station-Echo-Tileset 1_53: 1476028060
+      Station-Echo-Tileset 1_54: 247112302
+      Station-Echo-Tileset 1_55: -2031694349
+      Station-Echo-Tileset 1_56: 1188171114
+      Station-Echo-Tileset 1_57: -1461541033
+      Station-Echo-Tileset 1_58: -834705695
+      Station-Echo-Tileset 1_59: 1431479142
       Station-Echo-Tileset 1_6: 6676395654874403333
-      Station-Echo-Tileset 1_60: -837084004
-      Station-Echo-Tileset 1_61: -1889323202
-      Station-Echo-Tileset 1_62: 1374936984
-      Station-Echo-Tileset 1_63: 1781829476
-      Station-Echo-Tileset 1_64: 1598619304
-      Station-Echo-Tileset 1_65: -190670592
-      Station-Echo-Tileset 1_66: 475680902
-      Station-Echo-Tileset 1_67: -1455853981
-      Station-Echo-Tileset 1_68: -2051397065
-      Station-Echo-Tileset 1_69: -11549113
+      Station-Echo-Tileset 1_60: -164721017
+      Station-Echo-Tileset 1_61: -1940323166
+      Station-Echo-Tileset 1_62: 1792525001
+      Station-Echo-Tileset 1_63: -2130073967
+      Station-Echo-Tileset 1_64: 75253960
+      Station-Echo-Tileset 1_65: -432103923
+      Station-Echo-Tileset 1_66: -324085486
       Station-Echo-Tileset 1_7: 5434834547813494042
-      Station-Echo-Tileset 1_70: -1710157676
-      Station-Echo-Tileset 1_71: -1520784501
-      Station-Echo-Tileset 1_72: -1921966569
-      Station-Echo-Tileset 1_73: -605803410
-      Station-Echo-Tileset 1_74: -1332530431
-      Station-Echo-Tileset 1_75: -916552542
-      Station-Echo-Tileset 1_76: -1790781203
-      Station-Echo-Tileset 1_77: -1138510476
-      Station-Echo-Tileset 1_78: -1181897542
-      Station-Echo-Tileset 1_79: 548797491
       Station-Echo-Tileset 1_8: -5943466470255628893
-      Station-Echo-Tileset 1_80: 1222758
-      Station-Echo-Tileset 1_81: -1262154677
-      Station-Echo-Tileset 1_82: 1923007521
-      Station-Echo-Tileset 1_83: 893795921
-      Station-Echo-Tileset 1_84: -28149683
-      Station-Echo-Tileset 1_85: -1622688756
-      Station-Echo-Tileset 1_86: -71351724
-      Station-Echo-Tileset 1_87: 285000779
-      Station-Echo-Tileset 1_88: -1413876551
-      Station-Echo-Tileset 1_89: 919453002
       Station-Echo-Tileset 1_9: -7523110920859930408
-      Station-Echo-Tileset 1_90: -305756824
-      Station-Echo-Tileset 1_91: -417431072
-      Station-Echo-Tileset 1_92: 1397155123
-      Station-Echo-Tileset 1_93: 342540854
-      Station-Echo-Tileset 1_94: -552354436
-      Station-Echo-Tileset 1_95: 1882156662
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
