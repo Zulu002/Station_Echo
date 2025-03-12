@@ -67,4 +67,12 @@ public class PlayerHealth : MonoBehaviour
             hearts[i].enabled = i < currentLives;
         }
     }
+
+    public void RestoreAllLives()
+    {
+        currentLives = maxLives; // Полное восстановление
+        UpdateLivesUI();
+        Debug.Log("Все жизни восстановлены!");
+    }
+
 }
