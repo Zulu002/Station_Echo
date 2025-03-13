@@ -17,6 +17,16 @@ public class PlayerHealth : MonoBehaviour
         UpdateLivesUI();
     }
 
+    void Update()
+    {
+        if (animator.GetCurrentAnimatorStateInfo(0).IsName("Hit") &&
+            animator.GetCurrentAnimatorStateInfo(0).normalizedTime >= 1f)
+        {
+            animator.Play("Idle"); // ѕосле удара возвращаемс€ в нейтральную анимацию
+        }
+    }
+
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Hazard")) TakeDamage();
@@ -25,12 +35,22 @@ public class PlayerHealth : MonoBehaviour
 
     private void TakeDamage()
     {
+        if (animator != null)
+        {
+            animator.Play("Hit", -1, 0f); // ѕроигрываем анимацию с самого начала
+        }
+
         currentLives--;
         UpdateLivesUI();
         Debug.Log($"Player hit! Lives remaining: {currentLives}");
 
-        if (currentLives <= 0) Die();
+        if (currentLives <= 0)
+        {
+            Die();
+        }
     }
+
+
 
     private void Die()
     {
