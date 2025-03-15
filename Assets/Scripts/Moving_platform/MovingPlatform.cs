@@ -18,21 +18,19 @@ public class MovingPlatform : MonoBehaviour
         }
     }
 
-    // Когда игрок встал на платформу – делаем его дочерним объектом
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Player"))
         {
-            collision.transform.SetParent(transform);
+            collision.transform.SetParent(transform); // Присоединяем игрока к платформе
         }
     }
 
-    // Когда игрок спрыгнул с платформы – убираем связь
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.CompareTag("Player"))
+        if (collision.CompareTag("Player") && gameObject.activeInHierarchy) // Проверяем, активна ли платформа
         {
-            collision.transform.SetParent(null);
+            collision.transform.SetParent(null); // Отвязываем игрока
         }
     }
 }
