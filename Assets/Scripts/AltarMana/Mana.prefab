@@ -98,7 +98,7 @@ GameObject:
   - component: {fileID: 7661097546320586856}
   - component: {fileID: 4633560735696602843}
   - component: {fileID: 7471284696662244397}
-  - component: {fileID: 8469771029185493396}
+  - component: {fileID: 3703631912585377396}
   m_Layer: 0
   m_Name: Mana
   m_TagString: Untagged
@@ -223,7 +223,7 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &8469771029185493396
+--- !u!114 &3703631912585377396
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -235,6 +235,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 47f947f2ec8e0cd4988b55b7b29b031d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  amount_of_satiety: 25
+  amount_of_satiety: 20
   interactionHint: {fileID: 2633691654984353175}
-  playerHunger: {fileID: 0}
+  playerHunger: {fileID: 5367876173361343885, guid: e80aaf2363261ea43af823be8ad210b8, type: 3}

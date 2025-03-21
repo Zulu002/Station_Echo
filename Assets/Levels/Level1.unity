@@ -14131,6 +14131,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3703631912585377396, guid: b5a6929ffb38c82459be3da56203f4ed, type: 3}
+      propertyPath: playerHunger
+      value: 
+      objectReference: {fileID: 2008561648}
     - target: {fileID: 6943937183290231219, guid: b5a6929ffb38c82459be3da56203f4ed, type: 3}
       propertyPath: m_Name
       value: Mana
@@ -15033,11 +15037,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5752791145352479146, guid: e80aaf2363261ea43af823be8ad210b8, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -11.37
+      value: -12.19
       objectReference: {fileID: 0}
     - target: {fileID: 5752791145352479146, guid: e80aaf2363261ea43af823be8ad210b8, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -21.77
+      value: -20.78
       objectReference: {fileID: 0}
     - target: {fileID: 5752791145352479146, guid: e80aaf2363261ea43af823be8ad210b8, type: 3}
       propertyPath: m_LocalPosition.z
@@ -15238,6 +15242,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 6067407466476038815, guid: d66ce4b5d83810c4a8b21b0c3193be93, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8130744686087206447, guid: d66ce4b5d83810c4a8b21b0c3193be93, type: 3}
       propertyPath: m_LocalPosition.x
       value: 34.5
@@ -15281,6 +15289,14 @@ PrefabInstance:
     - target: {fileID: 8840985604291609676, guid: d66ce4b5d83810c4a8b21b0c3193be93, type: 3}
       propertyPath: m_Name
       value: Stone
+      objectReference: {fileID: 0}
+    - target: {fileID: 8927690784280786986, guid: d66ce4b5d83810c4a8b21b0c3193be93, type: 3}
+      propertyPath: m_Mass
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 8927690784280786986, guid: d66ce4b5d83810c4a8b21b0c3193be93, type: 3}
+      propertyPath: m_Constraints
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
