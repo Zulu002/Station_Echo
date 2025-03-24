@@ -29,18 +29,18 @@ public class PlayerHealth : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Hazard")) TakeDamage();
+        if (collision.CompareTag("Hazard")) TakeDamage(1);
         if (collision.CompareTag("DeathZone")) Die();
     }
 
-    private void TakeDamage()
+    public void TakeDamage(int damage)
     {
         if (animator != null)
         {
-            animator.Play("Hit", -1, 0f); // Проигрываем анимацию с самого начала
+            animator.Play("Hit", -1, 0f);
         }
 
-        currentLives--;
+        currentLives -= damage; // Отнимаем указанное количество HP
         UpdateLivesUI();
         Debug.Log($"Player hit! Lives remaining: {currentLives}");
 
@@ -49,6 +49,7 @@ public class PlayerHealth : MonoBehaviour
             Die();
         }
     }
+
 
 
 
