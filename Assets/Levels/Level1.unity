@@ -14837,6 +14837,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1490846994066094690, guid: d244dda2612a0d642bfb7e57b7e9e530, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -4.361
+      objectReference: {fileID: 0}
+    - target: {fileID: 3496645552572153666, guid: d244dda2612a0d642bfb7e57b7e9e530, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -4.361
+      objectReference: {fileID: 0}
     - target: {fileID: 6317401597416641879, guid: d244dda2612a0d642bfb7e57b7e9e530, type: 3}
       propertyPath: m_Name
       value: MushroomEnemy
