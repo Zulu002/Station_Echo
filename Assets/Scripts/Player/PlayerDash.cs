@@ -36,9 +36,10 @@ public class PlayerDash : MonoBehaviour
         canDash = false;
         isDashing = true;
         rb.gravityScale = 0;
-        animator.SetBool("Dashing", true); // Включаем анимацию рывка
+        animator.SetBool("Dashing", true);
 
         hungerSystem.OnDash(); // Тратим сытость
+        SetInvulnerable(true); // Делаем игрока неуязвимым
 
         float direction = Input.GetAxisRaw("Horizontal");
         if (direction == 0) direction = transform.localScale.x;
@@ -54,10 +55,16 @@ public class PlayerDash : MonoBehaviour
         rb.linearVelocity = Vector2.zero;
         rb.gravityScale = originalGravity;
         isDashing = false;
-        animator.SetBool("Dashing", false); // Выключаем анимацию рывка
+        animator.SetBool("Dashing", false);
+        SetInvulnerable(false); // Возвращаем уязвимость
 
         yield return new WaitForSeconds(dashCooldown);
         canDash = true;
+    }
+
+    private void SetInvulnerable(bool state)
+    {
+        Physics2D.IgnoreLayerCollision(LayerMask.NameToLayer("Player"), LayerMask.NameToLayer("Enemy"), state);
     }
 
     public void DisableDash()
