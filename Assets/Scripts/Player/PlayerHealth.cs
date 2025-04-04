@@ -13,6 +13,8 @@ public class PlayerHealth : MonoBehaviour
 
     void Start()
     {
+        GameManager.Instance.player = this.gameObject;
+        transform.position = GameManager.Instance.lastCheckpointPosition;
         currentLives = maxLives;
         UpdateLivesUI();
     }
