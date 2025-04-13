@@ -23523,6 +23523,30 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1451742467567439656, guid: 59607819641acf848b456d458fc5602b, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: -2410491777578258250, guid: 20c68ac1f08011243aa865f76c90e280, type: 2}
+    - target: {fileID: 1846499872982610833, guid: 59607819641acf848b456d458fc5602b, type: 3}
+      propertyPath: m_fontSize
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1846499872982610833, guid: 59607819641acf848b456d458fc5602b, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 20c68ac1f08011243aa865f76c90e280, type: 2}
+    - target: {fileID: 1846499872982610833, guid: 59607819641acf848b456d458fc5602b, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1846499872982610833, guid: 59607819641acf848b456d458fc5602b, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: -2410491777578258250, guid: 20c68ac1f08011243aa865f76c90e280, type: 2}
+    - target: {fileID: 1846499872982610833, guid: 59607819641acf848b456d458fc5602b, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2305707634055278430, guid: 59607819641acf848b456d458fc5602b, type: 3}
       propertyPath: m_LocalPosition.x
       value: 37.711
@@ -23571,10 +23595,17 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 2008561640}
+    - target: {fileID: 5651916833142498421, guid: 59607819641acf848b456d458fc5602b, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 5651916833142498421, guid: 59607819641acf848b456d458fc5602b, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: 59607819641acf848b456d458fc5602b, type: 3}
 --- !u!1001 &4368153805665578973
 PrefabInstance:
