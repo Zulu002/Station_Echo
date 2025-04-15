@@ -12,8 +12,8 @@ GameObject:
   - component: {fileID: 4690970070843541164}
   - component: {fileID: 8513192712668233569}
   - component: {fileID: 6628756731261588949}
-  - component: {fileID: 926466545532153127}
   - component: {fileID: 3852366326778203269}
+  - component: {fileID: 608826651025588666}
   m_Layer: 0
   m_Name: Sellingfloor
   m_TagString: Untagged
@@ -164,20 +164,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &926466545532153127
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4164707505713399859}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d9aa0346aed394945b8ebe181455decd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  disappearTime: 0.5
-  respawnTime: 3
 --- !u!95 &3852366326778203269
 Animator:
   serializedVersion: 7
@@ -200,3 +186,17 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &608826651025588666
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4164707505713399859}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d9aa0346aed394945b8ebe181455decd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  disappearTime: 2
+  respawnTime: 3

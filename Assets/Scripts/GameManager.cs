@@ -1,21 +1,22 @@
-using UnityEngine;
-using UnityEngine.SceneManagement;
+﻿using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
-
+    public Vector3 initialPosition;
     public Vector3 lastCheckpointPosition;
     public GameObject player;
 
+
     private void Awake()
     {
+        
         if (Instance == null)
         {
             Instance = this;
             DontDestroyOnLoad(gameObject);
 
-            LoadCheckpoint(); // ��� ������� � ��������� ��������
+            LoadCheckpoint(); 
         }
         else
         {
@@ -23,37 +24,65 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    public void RestartFromCheckpoint()
+    private void Start()
     {
-        if (player != null)
+        bool isNewGame = PlayerPrefs.GetInt("IsNewGame", 0) == 1;
+
+        if (isNewGame)
         {
-            player.transform.position = lastCheckpointPosition;
+            lastCheckpointPosition = initialPosition;
+            PlayerPrefs.DeleteKey("CheckpointX");
+            PlayerPrefs.DeleteKey("CheckpointY");
+            PlayerPrefs.DeleteKey("CheckpointZ");
+            PlayerPrefs.DeleteKey("IsNewGame"); // важно! только один раз
+            Debug.Log("Запущена новая игра, старт с начальной позиции");
+        }
+        else
+        {
+            LoadCheckpoint(); // ← вот сюда должно попадать при перезапуске игры
+            Debug.Log("Продолжение игры с чекпоинта");
         }
     }
 
-    public void SetCheckpoint(Vector3 checkpointPosition)
+
+    public Vector3 GetPlayerStartPosition()
     {
-        lastCheckpointPosition = checkpointPosition;
-        PlayerPrefs.SetFloat("CheckpointX", checkpointPosition.x);
-        PlayerPrefs.SetFloat("CheckpointY", checkpointPosition.y);
-        PlayerPrefs.SetFloat("CheckpointZ", checkpointPosition.z);
-        PlayerPrefs.Save();
+        bool isNewGame = PlayerPrefs.GetInt("IsNewGame", 0) == 1;
+
+        if (isNewGame)
+        {
+            PlayerPrefs.DeleteKey("IsNewGame");
+            PlayerPrefs.Save();
+            return initialPosition;
+        }
+
+        return lastCheckpointPosition;
     }
 
-    public void LoadCheckpoint()
+    public void SetCheckpoint(Vector3 position)
+    {
+        lastCheckpointPosition = position;
+        PlayerPrefs.SetFloat("CheckpointX", position.x);
+        PlayerPrefs.SetFloat("CheckpointY", position.y);
+        PlayerPrefs.SetFloat("CheckpointZ", position.z);
+        PlayerPrefs.Save();
+        Debug.Log($"Checkpoint сохранён: {position}");
+    }
+
+    private void LoadCheckpoint()
     {
         if (PlayerPrefs.HasKey("CheckpointX"))
         {
-            lastCheckpointPosition = new Vector3(
-                PlayerPrefs.GetFloat("CheckpointX"),
-                PlayerPrefs.GetFloat("CheckpointY"),
-                PlayerPrefs.GetFloat("CheckpointZ")
-            );
+            float x = PlayerPrefs.GetFloat("CheckpointX");
+            float y = PlayerPrefs.GetFloat("CheckpointY");
+            float z = PlayerPrefs.GetFloat("CheckpointZ");
+            lastCheckpointPosition = new Vector3(x, y, z);
+            Debug.Log($"Чекпоинт загружен: {lastCheckpointPosition}");
         }
-    }
-
-    public void RestartLevel() // ���� �� �� ����� ������������� �����
-    {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        else
+        {
+            lastCheckpointPosition = initialPosition;
+            Debug.Log("Чекпоинт не найден, старт с начальной позиции");
+        }
     }
 }
