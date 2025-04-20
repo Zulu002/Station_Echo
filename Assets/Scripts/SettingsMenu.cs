@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.Audio;
 using UnityEngine.UI;
+using System.Collections.Generic;
 
 public class SettingsMenu : MonoBehaviour
 {
@@ -11,6 +12,16 @@ public class SettingsMenu : MonoBehaviour
     public Dropdown resolutionDropdown;
 
     private Resolution[] resolutions;
+    private List<Resolution> filteredResolutions = new List<Resolution>();
+
+    void Awake()
+    {
+        // Устанавливаем разрешение из сохранений при запуске
+        int width = PlayerPrefs.GetInt("ResolutionWidth", 1920);
+        int height = PlayerPrefs.GetInt("ResolutionHeight", 1080);
+        bool isFullscreen = PlayerPrefs.GetInt("Fullscreen", 1) == 1;
+        Screen.SetResolution(width, height, isFullscreen);
+    }
 
     void Start()
     {
@@ -26,14 +37,14 @@ public class SettingsMenu : MonoBehaviour
         if (qualityDropdown != null)
         {
             qualityDropdown.ClearOptions();
-            qualityDropdown.AddOptions(new System.Collections.Generic.List<string>(QualitySettings.names));
+            qualityDropdown.AddOptions(new List<string>(QualitySettings.names));
             int savedQuality = PlayerPrefs.GetInt("Quality", QualitySettings.GetQualityLevel());
             qualityDropdown.value = savedQuality;
             qualityDropdown.RefreshShownValue();
             QualitySettings.SetQualityLevel(savedQuality);
         }
 
-        // 🪟 Fullscreen
+        // 🪟 Полноэкранный режим
         if (fullscreenToggle != null)
         {
             bool isFullscreen = PlayerPrefs.GetInt("Fullscreen", 1) == 1;
@@ -47,18 +58,25 @@ public class SettingsMenu : MonoBehaviour
             resolutions = Screen.resolutions;
             resolutionDropdown.ClearOptions();
 
-            var options = new System.Collections.Generic.List<string>();
+            var options = new List<string>();
+            HashSet<string> addedResolutions = new HashSet<string>();
             int currentResolutionIndex = 0;
 
             for (int i = 0; i < resolutions.Length; i++)
             {
-                string option = resolutions[i].width + " x " + resolutions[i].height;
-                if (!options.Contains(option))
-                    options.Add(option);
+                string resString = resolutions[i].width + " x " + resolutions[i].height;
 
-                if (resolutions[i].width == 1920 && resolutions[i].height == 1080)
+                if (!addedResolutions.Contains(resString))
                 {
-                    currentResolutionIndex = i;
+                    addedResolutions.Add(resString);
+                    filteredResolutions.Add(resolutions[i]);
+                    options.Add(resString);
+
+                    // Проверка текущего разрешения
+                    if (resolutions[i].width == Screen.width && resolutions[i].height == Screen.height)
+                    {
+                        currentResolutionIndex = filteredResolutions.Count - 1;
+                    }
                 }
             }
 
@@ -79,10 +97,14 @@ public class SettingsMenu : MonoBehaviour
         SetQuality(quality);
         SetResolution(resolutionIndex, fullscreen);
 
-        // Сохраняем только громкость, качество и фуллскрин
+        // Сохраняем настройки
         PlayerPrefs.SetFloat("Volume", volume);
         PlayerPrefs.SetInt("Quality", quality);
         PlayerPrefs.SetInt("Fullscreen", fullscreen ? 1 : 0);
+
+        Resolution selectedRes = filteredResolutions[resolutionIndex];
+        PlayerPrefs.SetInt("ResolutionWidth", selectedRes.width);
+        PlayerPrefs.SetInt("ResolutionHeight", selectedRes.height);
 
         Debug.Log("Настройки применены");
     }
@@ -102,10 +124,10 @@ public class SettingsMenu : MonoBehaviour
 
     public void SetResolution(int resolutionIndex, bool fullscreen)
     {
-        if (resolutions == null || resolutions.Length == 0)
+        if (filteredResolutions == null || filteredResolutions.Count == 0)
             return;
 
-        Resolution resolution = resolutions[resolutionIndex];
+        Resolution resolution = filteredResolutions[resolutionIndex];
         Screen.SetResolution(resolution.width, resolution.height, fullscreen);
     }
 
