@@ -7,7 +7,6 @@ public class SettingsMenu : MonoBehaviour
 {
     public AudioMixer audioMixer;
     public Slider volumeSlider;
-    public Dropdown qualityDropdown;
     public Toggle fullscreenToggle;
     public Dropdown resolutionDropdown;
 
@@ -16,7 +15,7 @@ public class SettingsMenu : MonoBehaviour
 
     void Awake()
     {
-        // Устанавливаем разрешение из сохранений при запуске
+        // Устанавливаем разрешение и fullscreen из сохранений при запуске
         int width = PlayerPrefs.GetInt("ResolutionWidth", 1920);
         int height = PlayerPrefs.GetInt("ResolutionHeight", 1080);
         bool isFullscreen = PlayerPrefs.GetInt("Fullscreen", 1) == 1;
@@ -31,17 +30,6 @@ public class SettingsMenu : MonoBehaviour
             float volume = PlayerPrefs.GetFloat("Volume", 0.75f);
             volumeSlider.value = volume;
             audioMixer.SetFloat("Volume", Mathf.Log10(volume) * 20);
-        }
-
-        // 🖼️ Качество
-        if (qualityDropdown != null)
-        {
-            qualityDropdown.ClearOptions();
-            qualityDropdown.AddOptions(new List<string>(QualitySettings.names));
-            int savedQuality = PlayerPrefs.GetInt("Quality", QualitySettings.GetQualityLevel());
-            qualityDropdown.value = savedQuality;
-            qualityDropdown.RefreshShownValue();
-            QualitySettings.SetQualityLevel(savedQuality);
         }
 
         // 🪟 Полноэкранный режим
@@ -72,7 +60,6 @@ public class SettingsMenu : MonoBehaviour
                     filteredResolutions.Add(resolutions[i]);
                     options.Add(resString);
 
-                    // Проверка текущего разрешения
                     if (resolutions[i].width == Screen.width && resolutions[i].height == Screen.height)
                     {
                         currentResolutionIndex = filteredResolutions.Count - 1;
@@ -89,17 +76,13 @@ public class SettingsMenu : MonoBehaviour
     public void ApplySettings()
     {
         float volume = volumeSlider.value;
-        int quality = qualityDropdown.value;
         bool fullscreen = fullscreenToggle.isOn;
         int resolutionIndex = resolutionDropdown.value;
 
         SetVolume(volume);
-        SetQuality(quality);
         SetResolution(resolutionIndex, fullscreen);
 
-        // Сохраняем настройки
         PlayerPrefs.SetFloat("Volume", volume);
-        PlayerPrefs.SetInt("Quality", quality);
         PlayerPrefs.SetInt("Fullscreen", fullscreen ? 1 : 0);
 
         Resolution selectedRes = filteredResolutions[resolutionIndex];
@@ -115,11 +98,6 @@ public class SettingsMenu : MonoBehaviour
         {
             audioMixer.SetFloat("Volume", Mathf.Log10(volume) * 20);
         }
-    }
-
-    public void SetQuality(int index)
-    {
-        QualitySettings.SetQualityLevel(index);
     }
 
     public void SetResolution(int resolutionIndex, bool fullscreen)
