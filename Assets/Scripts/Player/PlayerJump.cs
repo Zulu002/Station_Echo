@@ -12,6 +12,10 @@ public class PlayerJump : MonoBehaviour
     private bool isGrounded; // Проверка контакта с землей
     public Animator animator; // Ссылка на аниматор
 
+    [Header("Звук прыжка")]
+    public AudioClip jumpSound;
+    private AudioSource audioSource;
+
     // Настройки для кайот-тайм
     [Header("Настройки для кайот-тайм")]
     public float coyoteTime = 0.2f; // Время, когда можно прыгнуть после ухода с платформы
@@ -35,6 +39,7 @@ public class PlayerJump : MonoBehaviour
 
     void Start()
     {
+        audioSource = GetComponent<AudioSource>();
         rb = GetComponent<Rigidbody2D>(); // Инициализация физики
         hungerSystem = GetComponent<HungerSystem>(); // Инициализация системы голода
     }
@@ -112,6 +117,11 @@ public class PlayerJump : MonoBehaviour
 
         // Обнуляем счетчик кайот-тайм
         coyoteTimeCounter = 0f;
+
+        if (jumpSound != null && audioSource != null)
+        {
+            audioSource.PlayOneShot(jumpSound);
+        }
     }
 
     private void ContinueJump()

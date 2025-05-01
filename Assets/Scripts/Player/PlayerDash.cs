@@ -3,6 +3,11 @@ using System.Collections;
 
 public class PlayerDash : MonoBehaviour
 {
+    [Header("Звук рывка")]
+    public AudioClip dashSound;
+    private AudioSource audioSource;
+
+
     [Header("Параметры рывка")]
     public float dashSpeed = 25f;
     public float dashTime = 0.2f;
@@ -17,6 +22,7 @@ public class PlayerDash : MonoBehaviour
 
     private void Start()
     {
+        audioSource = GetComponent<AudioSource>();
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>(); // Получаем компонент анимации
         originalGravity = rb.gravityScale;
@@ -40,6 +46,11 @@ public class PlayerDash : MonoBehaviour
 
         hungerSystem.OnDash(); // Тратим сытость
         SetInvulnerable(true); // Делаем игрока неуязвимым
+
+        if (dashSound != null && audioSource != null)
+        {
+            audioSource.PlayOneShot(dashSound);
+        }
 
         float direction = Input.GetAxisRaw("Horizontal");
         if (direction == 0) direction = transform.localScale.x;

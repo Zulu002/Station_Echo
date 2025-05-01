@@ -1,4 +1,4 @@
-using UnityEngine;
+п»їusing UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
@@ -8,17 +8,21 @@ public class PlayerHealth : MonoBehaviour
     public int maxLives = 3;
     private int currentLives;
 
-    // Массив изображений для отображения жизней
     public Image[] hearts;
+
+    [Header("Р—РІСѓРєРё")]
+    public AudioClip hitSound;
+    public AudioClip deathSound;
+    private AudioSource audioSource;
 
     void Start()
     {
         GameManager.Instance.player = this.gameObject;
 
-        
-
         currentLives = maxLives;
         UpdateLivesUI();
+
+        audioSource = GetComponent<AudioSource>(); // РРЅРёС†РёР°Р»РёР·Р°С†РёСЏ РёСЃС‚РѕС‡РЅРёРєР° Р·РІСѓРєР°
     }
 
     void Update()
@@ -26,10 +30,9 @@ public class PlayerHealth : MonoBehaviour
         if (animator.GetCurrentAnimatorStateInfo(0).IsName("Hit") &&
             animator.GetCurrentAnimatorStateInfo(0).normalizedTime >= 1f)
         {
-            animator.Play("Idle"); // После удара возвращаемся в нейтральную анимацию
+            animator.Play("Idle");
         }
     }
-
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -39,29 +42,27 @@ public class PlayerHealth : MonoBehaviour
 
     public void TakeDamage(int damage)
     {
-        if (animator != null)
-        {
-            animator.Play("Hit", -1, 0f);
-        }
+        if (animator != null) animator.Play("Hit", -1, 0f);
 
-        currentLives -= damage; // Отнимаем указанное количество HP
+        currentLives -= damage;
         UpdateLivesUI();
-        Debug.Log($"Player hit! Lives remaining: {currentLives}");
 
-        if (currentLives <= 0)
-        {
-            Die();
-        }
+        // рџЋµ Р—РІСѓРє СѓРґР°СЂР°
+        if (hitSound != null && audioSource != null)
+            audioSource.PlayOneShot(hitSound);
+
+        if (currentLives <= 0) Die();
     }
-
-
-
 
     private void Die()
     {
         Debug.Log("Player Died");
 
         if (animator != null) animator.SetTrigger("Death");
+
+        // рџЋµ Р—РІСѓРє СЃРјРµСЂС‚Рё
+        if (deathSound != null && audioSource != null)
+            audioSource.PlayOneShot(deathSound);
 
         GetComponent<PlayerMovement>().enabled = false;
         GetComponent<PlayerJump>().enabled = false;
@@ -80,13 +81,11 @@ public class PlayerHealth : MonoBehaviour
         {
             currentLives++;
             UpdateLivesUI();
-            Debug.Log($"Life added! Current lives: {currentLives}");
         }
     }
 
     private void UpdateLivesUI()
     {
-        // Перебираем сердечки и включаем только те, которые соответствуют текущему количеству жизней
         for (int i = 0; i < hearts.Length; i++)
         {
             hearts[i].enabled = i < currentLives;
@@ -95,9 +94,7 @@ public class PlayerHealth : MonoBehaviour
 
     public void RestoreAllLives()
     {
-        currentLives = maxLives; // Полное восстановление
+        currentLives = maxLives;
         UpdateLivesUI();
-        Debug.Log("Все жизни восстановлены!");
     }
-
 }
