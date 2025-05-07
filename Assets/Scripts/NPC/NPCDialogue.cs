@@ -4,11 +4,14 @@ using System.Collections;
 
 public class NPCDialogue : MonoBehaviour
 {
-    public string[] dialogueLines; // Реплики NPC
-    public float textSpeed = 0.05f; // Скорость печати текста
+    public string[] dialogueLines;
+    public float textSpeed = 0.05f;
 
-    public GameObject interactIcon; // PNG "E" (SpriteRenderer)
-    public TextMeshPro textMeshPro; // Текст NPC
+    public GameObject interactIcon;
+    public TextMeshPro textMeshPro;
+
+    public AudioClip textSound; // Звук текста
+    private AudioSource audioSource;
 
     private bool isPlayerNear = false;
     private bool isDialogueActive = false;
@@ -19,6 +22,8 @@ public class NPCDialogue : MonoBehaviour
     {
         interactIcon.SetActive(false);
         textMeshPro.gameObject.SetActive(false);
+
+        audioSource = GetComponent<AudioSource>();
     }
 
     void Update()
@@ -46,6 +51,7 @@ public class NPCDialogue : MonoBehaviour
         textMeshPro.gameObject.SetActive(true);
         interactIcon.SetActive(false);
         currentLineIndex = 0;
+        PlayTextSound(); // звук при начале диалога
         StartCoroutine(TypeText(dialogueLines[currentLineIndex]));
     }
 
@@ -75,6 +81,7 @@ public class NPCDialogue : MonoBehaviour
         if (currentLineIndex < dialogueLines.Length - 1)
         {
             currentLineIndex++;
+            PlayTextSound(); // звук при переключении строки
             StartCoroutine(TypeText(dialogueLines[currentLineIndex]));
         }
         else
@@ -88,6 +95,14 @@ public class NPCDialogue : MonoBehaviour
         isDialogueActive = false;
         textMeshPro.gameObject.SetActive(false);
         interactIcon.SetActive(true);
+    }
+
+    private void PlayTextSound()
+    {
+        if (textSound != null && audioSource != null)
+        {
+            audioSource.PlayOneShot(textSound);
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

@@ -39,7 +39,7 @@ public class GameManager : MonoBehaviour
         }
         else
         {
-            LoadCheckpoint(); // ← вот сюда должно попадать при перезапуске игры
+            LoadCheckpoint(); //  вот сюда должно попадать при перезапуске игры
             Debug.Log("Продолжение игры с чекпоинта");
         }
     }

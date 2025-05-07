@@ -1,14 +1,19 @@
-using UnityEngine;
+﻿using UnityEngine;
 
 public class PressurePlate : MonoBehaviour
 {
-    public GameObject door; // ������ �� �����
+    public GameObject door; // Ссылка на дверь
+    public AudioClip pressSound; // Звук активации
+    private AudioSource audioSource; // Источник звука
+
     private Animator animator;
     private int objectsOnPlate = 0;
+    private bool isPressed = false;
 
     private void Start()
     {
         animator = GetComponent<Animator>();
+        audioSource = GetComponent<AudioSource>();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -31,16 +36,21 @@ public class PressurePlate : MonoBehaviour
 
     private void UpdatePlateState()
     {
-        bool isPressed = objectsOnPlate > 0;
+        bool newPressed = objectsOnPlate > 0;
 
-        if (animator != null)
+        if (newPressed != isPressed)
         {
-            animator.SetBool("Pressed", isPressed);
-        }
+            isPressed = newPressed;
 
-        if (door != null)
-        {
-            door.GetComponent<Door>().SetDoorState(isPressed);
+            if (animator != null)
+                animator.SetBool("Pressed", isPressed);
+
+            if (door != null)
+                door.GetComponent<Door>().SetDoorState(isPressed);
+
+            // Воспроизвести звук при активации
+            if (isPressed && audioSource != null && pressSound != null)
+                audioSource.PlayOneShot(pressSound);
         }
     }
 }

@@ -47,7 +47,7 @@ public class PlayerHealth : MonoBehaviour
         currentLives -= damage;
         UpdateLivesUI();
 
-        // 🎵 Звук удара
+        // Звук удара
         if (hitSound != null && audioSource != null)
             audioSource.PlayOneShot(hitSound);
 
@@ -60,7 +60,7 @@ public class PlayerHealth : MonoBehaviour
 
         if (animator != null) animator.SetTrigger("Death");
 
-        // 🎵 Звук смерти
+        // Звук смерти
         if (deathSound != null && audioSource != null)
             audioSource.PlayOneShot(deathSound);
 

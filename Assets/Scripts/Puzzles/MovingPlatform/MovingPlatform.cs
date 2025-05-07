@@ -1,4 +1,4 @@
-using UnityEngine;
+п»їusing UnityEngine;
 
 public class MovingPlatform : MonoBehaviour
 {
@@ -22,15 +22,15 @@ public class MovingPlatform : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
-            collision.transform.SetParent(transform); // Присоединяем игрока к платформе
+            collision.transform.SetParent(transform); // РџСЂРёСЃРѕРµРґРёРЅСЏРµРј РёРіСЂРѕРєР° Рє РїР»Р°С‚С„РѕСЂРјРµ
         }
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.CompareTag("Player") && gameObject.activeInHierarchy) // Проверяем, активна ли платформа
+        if (collision.CompareTag("Player") && gameObject.activeInHierarchy) // РџСЂРѕРІРµСЂСЏРµРј, Р°РєС‚РёРІРЅР° Р»Рё РїР»Р°С‚С„РѕСЂРјР°
         {
-            collision.transform.SetParent(null); // Отвязываем игрока
+            collision.transform.SetParent(null); // РћС‚РІСЏР·С‹РІР°РµРј РёРіСЂРѕРєР°
         }
     }
 }

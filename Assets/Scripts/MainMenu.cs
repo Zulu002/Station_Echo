@@ -19,7 +19,7 @@ public class MainMenu : MonoBehaviour
     {
         if (PlayerPrefs.HasKey("CheckpointX"))
         {
-            PlayerPrefs.SetInt("IsNewGame", 0); // ← очень важно!
+            PlayerPrefs.SetInt("IsNewGame", 0); //  очень важно!
             PlayerPrefs.Save();
             SceneManager.LoadScene("Level1");
         }

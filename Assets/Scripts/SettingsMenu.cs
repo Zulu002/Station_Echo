@@ -24,7 +24,7 @@ public class SettingsMenu : MonoBehaviour
 
     void Start()
     {
-        // 🎚 Громкость
+        // Громкость
         if (volumeSlider != null && audioMixer != null)
         {
             float volume = PlayerPrefs.GetFloat("Volume", 0.75f);
@@ -32,7 +32,7 @@ public class SettingsMenu : MonoBehaviour
             audioMixer.SetFloat("Volume", Mathf.Log10(volume) * 20);
         }
 
-        // 🪟 Полноэкранный режим
+        //  Полноэкранный режим
         if (fullscreenToggle != null)
         {
             bool isFullscreen = PlayerPrefs.GetInt("Fullscreen", 1) == 1;
@@ -40,7 +40,7 @@ public class SettingsMenu : MonoBehaviour
             Screen.fullScreen = isFullscreen;
         }
 
-        // 📺 Разрешения
+        // Разрешения
         if (resolutionDropdown != null)
         {
             resolutions = Screen.resolutions;
@@ -96,7 +96,9 @@ public class SettingsMenu : MonoBehaviour
     {
         if (audioMixer != null)
         {
-            audioMixer.SetFloat("Volume", Mathf.Log10(volume) * 20);
+            // Clamp защищает от Log10(0), что вызывает ошибку
+            float dB = volume > 0.0001f ? Mathf.Log10(volume) * 20f : -80f;
+            audioMixer.SetFloat("Volume", dB);
         }
     }
 
