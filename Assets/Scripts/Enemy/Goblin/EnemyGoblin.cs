@@ -3,6 +3,7 @@ using System.Collections;
 
 public class EnemyGoblin : MonoBehaviour
 {
+
     public Transform pointA, pointB;
     public float speed = 2f;
     public float chaseSpeed = 3.5f;
@@ -12,11 +13,14 @@ public class EnemyGoblin : MonoBehaviour
     public int health = 3;
     public float attackCooldown = 2f;
     public LayerMask playerLayer;
+    public AudioClip hitSound;
+    public AudioClip deathSound;
 
     private Transform targetPoint;
     private GameObject player;
     private Animator animator;
     private Rigidbody2D rb;
+    private AudioSource audioSource;
     private bool isChasing = false;
     private bool isAttacking = false;
     private bool isDead = false;
@@ -28,6 +32,7 @@ public class EnemyGoblin : MonoBehaviour
         targetPoint = pointB;
         animator = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
+        audioSource = GetComponent<AudioSource>();
     }
 
     void Update()
@@ -161,6 +166,11 @@ public class EnemyGoblin : MonoBehaviour
         health -= damage;
         animator.SetTrigger("Hit");
 
+        if (hitSound != null)
+        {
+            audioSource.PlayOneShot(hitSound);
+        }
+
         if (health <= 0)
         {
             StartCoroutine(Die());
@@ -171,6 +181,12 @@ public class EnemyGoblin : MonoBehaviour
     {
         isDead = true;
         animator.SetTrigger("Death");
+
+        if (deathSound != null)
+        {
+            audioSource.PlayOneShot(deathSound);
+        }
+
         yield return new WaitForSeconds(1f);
         Destroy(gameObject); // Удаляем объект гоблина
     }

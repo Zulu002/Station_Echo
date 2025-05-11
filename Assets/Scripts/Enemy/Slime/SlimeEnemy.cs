@@ -10,17 +10,22 @@ public class SlimeEnemy : MonoBehaviour
 
     public LayerMask playerLayer; // Слой игрока
 
+    public AudioClip hitSound;
+    public AudioClip deathSound;
+
     private int currentHealth;
     private Transform player;
     private bool isAggro = false;
     private Animator animator;
     private Rigidbody2D rb;
     private bool isDead = false;
+    private AudioSource audioSource;
 
     void Start()
     {
         animator = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
+        audioSource = GetComponent<AudioSource>();
         currentHealth = maxHealth; // Устанавливаем полное здоровье
     }
 
@@ -105,6 +110,11 @@ public class SlimeEnemy : MonoBehaviour
         currentHealth -= damage;
         animator.SetTrigger("Hit"); // Запускаем анимацию ранения
 
+        if (hitSound != null && audioSource != null)
+        {
+            audioSource.PlayOneShot(hitSound); 
+        }
+
         if (currentHealth <= 0)
         {
             Die();
@@ -126,6 +136,11 @@ public class SlimeEnemy : MonoBehaviour
     {
         if (isDead) return;
         isDead = true;
+
+        if (deathSound != null && audioSource != null)
+        {
+            audioSource.PlayOneShot(deathSound);
+        }
 
         animator.SetTrigger("Death"); // Запускаем анимацию смерти
         rb.linearVelocity = Vector2.zero; // Полностью останавливаем
