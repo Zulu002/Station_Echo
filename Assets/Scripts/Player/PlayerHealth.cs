@@ -36,7 +36,7 @@ public class PlayerHealth : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Hazard")) TakeDamage(1);
+        if (collision.CompareTag("Hazard")) TakeDamage(2);
         if (collision.CompareTag("DeathZone")) Die();
     }
 

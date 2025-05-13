@@ -123,7 +123,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 27c141e9b80f6bc45979aae3be0ae190, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jumpForce: 7.5
+  jumpForce: 8
   groundCheck: {fileID: 2279666510457799367}
   groundLayer:
     serializedVersion: 2
@@ -250,8 +250,8 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: -0.026524544, y: -0.10685545}
-  m_Size: {x: 0.6873493, y: 1.0343198}
+  m_Offset: {x: -0.026524544, y: -0.1277793}
+  m_Size: {x: 0.6873493, y: 1.0761675}
   m_Direction: 0
 --- !u!95 &7494314269065733697
 Animator:
@@ -288,7 +288,7 @@ AudioSource:
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 0}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.15
   m_Pitch: 1
   Loop: 0
   Mute: 0
