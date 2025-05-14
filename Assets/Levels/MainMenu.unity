@@ -3244,6 +3244,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mainMenuPanel: {fileID: 1670086057}
   settingsPanel: {fileID: 1205227276}
+  continueButton: {fileID: 213979750}
 --- !u!4 &1645810679
 Transform:
   m_ObjectHideFlags: 0

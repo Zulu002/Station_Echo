@@ -7,7 +7,7 @@ public class Checkpoint : MonoBehaviour
         if (collision.CompareTag("Player"))
         {
             GameManager.Instance.SetCheckpoint(transform.position);
-            Debug.Log("Checkpoint saved!");
+            Debug.Log("Чекпоинт активирован");
         }
     }
 }

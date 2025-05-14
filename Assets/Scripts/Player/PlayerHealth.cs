@@ -22,7 +22,7 @@ public class PlayerHealth : MonoBehaviour
         currentLives = maxLives;
         UpdateLivesUI();
 
-        audioSource = GetComponent<AudioSource>(); // Инициализация источника звука
+        audioSource = GetComponent<AudioSource>();
     }
 
     void Update()
@@ -47,7 +47,6 @@ public class PlayerHealth : MonoBehaviour
         currentLives -= damage;
         UpdateLivesUI();
 
-        // Звук удара
         if (hitSound != null && audioSource != null)
             audioSource.PlayOneShot(hitSound);
 
@@ -56,11 +55,10 @@ public class PlayerHealth : MonoBehaviour
 
     private void Die()
     {
-        Debug.Log("Player Died");
+        Debug.Log("Игрок погиб");
 
         if (animator != null) animator.SetTrigger("Death");
 
-        // Звук смерти
         if (deathSound != null && audioSource != null)
             audioSource.PlayOneShot(deathSound);
 
@@ -73,6 +71,7 @@ public class PlayerHealth : MonoBehaviour
     private void RestartLevel()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        // Внимание: GameManager сохранится, а игрок будет перемещён скриптом ниже
     }
 
     public void AddLife()

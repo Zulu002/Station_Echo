@@ -3,60 +3,51 @@
 public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
-    public Vector3 initialPosition;
-    public Vector3 lastCheckpointPosition;
-    public GameObject player;
 
+    public Vector3 initialPosition; // Начальная позиция
+    public Vector3 lastCheckpointPosition; // Позиция последнего чекпоинта
+    public GameObject player;
 
     private void Awake()
     {
-        
         if (Instance == null)
         {
             Instance = this;
             DontDestroyOnLoad(gameObject);
-
-            LoadCheckpoint(); 
         }
         else
         {
             Destroy(gameObject);
+            return;
         }
+
+        // Если это новая игра, то используем начальную позицию, если нет, то загрузим чекпоинт
+        bool isNewGame = PlayerPrefs.GetInt("IsNewGame", 0) == 1;
+
+        if (isNewGame)
+        {
+            lastCheckpointPosition = initialPosition; // В новой игре всегда начинаем с начальной позиции
+            Debug.Log("Новая игра — старт с начальной позиции");
+        }
+        else
+        {
+            LoadCheckpoint(); // Загружаем чекпоинт, если он есть
+            Debug.Log("Продолжение игры — загрузка чекпоинта");
+        }
+
+        // Удаляем флаг новой игры
+        PlayerPrefs.DeleteKey("IsNewGame");
+        PlayerPrefs.Save();
     }
 
     private void Start()
     {
-        bool isNewGame = PlayerPrefs.GetInt("IsNewGame", 0) == 1;
-
-        if (isNewGame)
+        // Устанавливаем позицию игрока на начало
+        if (player != null)
         {
-            lastCheckpointPosition = initialPosition;
-            PlayerPrefs.DeleteKey("CheckpointX");
-            PlayerPrefs.DeleteKey("CheckpointY");
-            PlayerPrefs.DeleteKey("CheckpointZ");
-            PlayerPrefs.DeleteKey("IsNewGame"); // важно! только один раз
-            Debug.Log("Запущена новая игра, старт с начальной позиции");
+            player.transform.position = lastCheckpointPosition; // Устанавливаем позицию в соответствии с последним чекпоинтом или начальной позицией
+            Debug.Log("Игрок перемещён на позицию: " + lastCheckpointPosition);
         }
-        else
-        {
-            LoadCheckpoint(); //  вот сюда должно попадать при перезапуске игры
-            Debug.Log("Продолжение игры с чекпоинта");
-        }
-    }
-
-
-    public Vector3 GetPlayerStartPosition()
-    {
-        bool isNewGame = PlayerPrefs.GetInt("IsNewGame", 0) == 1;
-
-        if (isNewGame)
-        {
-            PlayerPrefs.DeleteKey("IsNewGame");
-            PlayerPrefs.Save();
-            return initialPosition;
-        }
-
-        return lastCheckpointPosition;
     }
 
     public void SetCheckpoint(Vector3 position)
@@ -81,8 +72,13 @@ public class GameManager : MonoBehaviour
         }
         else
         {
-            lastCheckpointPosition = initialPosition;
-            Debug.Log("Чекпоинт не найден, старт с начальной позиции");
+            lastCheckpointPosition = initialPosition; // Если чекпоинт не найден, начинаем с начальной позиции
+            Debug.Log("Чекпоинт не найден — старт с начальной позиции");
         }
+    }
+
+    public Vector3 GetPlayerStartPosition()
+    {
+        return lastCheckpointPosition;
     }
 }
