@@ -10,7 +10,7 @@ public class NPCDialogue : MonoBehaviour
     public GameObject interactIcon;
     public TextMeshPro textMeshPro;
 
-    public AudioClip textSound; // Звук текста
+    public AudioClip textSound; 
     private AudioSource audioSource;
 
     private bool isPlayerNear = false;
@@ -51,7 +51,7 @@ public class NPCDialogue : MonoBehaviour
         textMeshPro.gameObject.SetActive(true);
         interactIcon.SetActive(false);
         currentLineIndex = 0;
-        PlayTextSound(); // звук при начале диалога
+        PlayTextSound(); 
         StartCoroutine(TypeText(dialogueLines[currentLineIndex]));
     }
 
@@ -81,7 +81,7 @@ public class NPCDialogue : MonoBehaviour
         if (currentLineIndex < dialogueLines.Length - 1)
         {
             currentLineIndex++;
-            PlayTextSound(); // звук при переключении строки
+            PlayTextSound(); 
             StartCoroutine(TypeText(dialogueLines[currentLineIndex]));
         }
         else

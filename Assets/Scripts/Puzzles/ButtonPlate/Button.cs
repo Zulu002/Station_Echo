@@ -2,10 +2,10 @@ using UnityEngine;
 
 public class Button : MonoBehaviour
 {
-    public Door door; // Ссылка на дверь
-    private Animator animator; // Аниматор кнопки
-    private AudioSource audioSource; // Источник звука
-    public AudioClip buttonSound; // Звук кнопки
+    public Door door; 
+    private Animator animator;
+    private AudioSource audioSource; 
+    public AudioClip buttonSound; 
     private bool isActivated = false;
 
     private void Start()

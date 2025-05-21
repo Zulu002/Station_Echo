@@ -24,7 +24,7 @@ public class PlayerDash : MonoBehaviour
     {
         audioSource = GetComponent<AudioSource>();
         rb = GetComponent<Rigidbody2D>();
-        animator = GetComponent<Animator>(); // Получаем компонент анимации
+        animator = GetComponent<Animator>();
         originalGravity = rb.gravityScale;
         hungerSystem = GetComponent<HungerSystem>();
     }

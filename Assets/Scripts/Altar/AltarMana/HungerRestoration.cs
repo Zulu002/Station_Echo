@@ -3,10 +3,10 @@ using UnityEngine;
 public class HungerRestoration : MonoBehaviour
 {
     public int amount_of_satiety = 20;
-    public SpriteRenderer interactionHint; // —сылка на "E"
+    public SpriteRenderer interactionHint; 
     public HungerSystem playerHunger;
 
-    public AudioClip eatSound; //  лип звука еды
+    public AudioClip eatSound; 
     private AudioSource audioSource;
 
     private bool isPlayerNearby = false;

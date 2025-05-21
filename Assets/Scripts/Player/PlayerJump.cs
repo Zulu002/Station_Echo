@@ -2,36 +2,36 @@ using UnityEngine;
 
 public class PlayerJump : MonoBehaviour
 {
-    // Публичные параметры прыжка
-    public float jumpForce = 10f; // Сила прыжка
-    public Transform groundCheck; // Точка проверки земли
-    public LayerMask groundLayer; // Слой земли
+    
+    public float jumpForce = 10f;
+    public Transform groundCheck;
+    public LayerMask groundLayer;
 
-    // Внутренние переменные
-    private Rigidbody2D rb; // Физика персонажа
-    private bool isGrounded; // Проверка контакта с землей
-    public Animator animator; // Ссылка на аниматор
+    
+    private Rigidbody2D rb; 
+    private bool isGrounded; 
+    public Animator animator; 
 
     [Header("Звук прыжка")]
     public AudioClip jumpSound;
     private AudioSource audioSource;
 
-    // Настройки для кайот-тайм
+    
     [Header("Настройки для кайот-тайм")]
-    public float coyoteTime = 0.2f; // Время, когда можно прыгнуть после ухода с платформы
-    private float coyoteTimeCounter; // Счетчик кайот-тайм
+    public float coyoteTime = 0.2f; 
+    private float coyoteTimeCounter; 
 
-    // Настройки для двойных прыжков
+    
     [Header("Настройки для количества прыжков")]
-    public int maxAirJumps = 1; // Количество прыжков в воздухе
-    private int remainingJumps; // Сколько прыжков осталось
+    public int maxAirJumps = 1; 
+    private int remainingJumps; 
 
-    // Настройки для динамического прыжка
+    
     [Header("Настройки для динамического прыжка")]
-    public float jumpTimeMax = 0.3f; // Максимальное время удержания прыжка
-    public float jumpCutMultiplier = 3f; // Множитель для прерывания прыжка
-    private bool isJumping; // Флаг активного прыжка
-    private float jumpTimeCounter; // Счетчик времени прыжка
+    public float jumpTimeMax = 0.3f; 
+    public float jumpCutMultiplier = 3f; 
+    private bool isJumping; 
+    private float jumpTimeCounter; 
 
     // Ссылка на систему голода
     private HungerSystem hungerSystem;
@@ -40,20 +40,20 @@ public class PlayerJump : MonoBehaviour
     void Start()
     {
         audioSource = GetComponent<AudioSource>();
-        rb = GetComponent<Rigidbody2D>(); // Инициализация физики
-        hungerSystem = GetComponent<HungerSystem>(); // Инициализация системы голода
+        rb = GetComponent<Rigidbody2D>(); 
+        hungerSystem = GetComponent<HungerSystem>(); 
     }
 
     void Update()
     {
-        // Проверка земли
+        
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, 0.2f, groundLayer);
 
-        // Обновляем параметры анимации
+        
         animator.SetBool("Jumping", !isGrounded && rb.linearVelocity.y > 0);
         animator.SetBool("Falling", !isGrounded && rb.linearVelocity.y < 0);
 
-        // Сбрасываем счетчики при касании земли
+        
         if (isGrounded)
         {
             
@@ -65,30 +65,31 @@ public class PlayerJump : MonoBehaviour
             coyoteTimeCounter -= Time.deltaTime;
         }
 
-        // Начало прыжка
+
         if (Input.GetButtonDown("Jump"))
         {
-            if (isGrounded || coyoteTimeCounter > 0f || remainingJumps > 0)
+            
+            if (isGrounded || coyoteTimeCounter > 0f)
             {
-                if (isGrounded || coyoteTimeCounter > 0f)
-                {
-                    StartJump();
-                }
-                else if (hungerSystem != null && hungerSystem.CanJump())
-                {
-                    StartJump();
-                    hungerSystem.OnJump(); // Уменьшаем сытость при прыжке
-                }
+                StartJump();
+            }
+            
+            else if (remainingJumps > 0 && hungerSystem != null && hungerSystem.CanJump())
+            {
+                StartJump();
+                remainingJumps--;
+                hungerSystem.OnJump();
             }
         }
 
-        // Продолжение прыжка
+
+
         if (Input.GetButton("Jump") && isJumping)
         {
             ContinueJump();
         }
 
-        // Прерывание прыжка
+        
         if (Input.GetButtonUp("Jump"))
         {
             EndJumpEarly();
@@ -97,12 +98,12 @@ public class PlayerJump : MonoBehaviour
 
     private void StartJump()
     {
-        // Инициализируем прыжок
+        
         isJumping = true;
         jumpTimeCounter = jumpTimeMax;
         rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
 
-        // Уменьшаем количество оставшихся прыжков, если находимся в воздухе
+        
         if (!isGrounded)
         {
             if (coyoteTimeCounter > 0f)
@@ -115,7 +116,7 @@ public class PlayerJump : MonoBehaviour
             }
         }
 
-        // Обнуляем счетчик кайот-тайм
+        
         coyoteTimeCounter = 0f;
 
         if (jumpSound != null && audioSource != null)
@@ -126,7 +127,7 @@ public class PlayerJump : MonoBehaviour
 
     private void ContinueJump()
     {
-        // Продолжаем прыжок, пока есть запас времени
+        
         if (jumpTimeCounter > 0)
         {
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
@@ -140,7 +141,7 @@ public class PlayerJump : MonoBehaviour
 
     private void EndJumpEarly()
     {
-        // Преждевременно заканчиваем прыжок
+        
         isJumping = false;
         if (rb.linearVelocity.y > 0)
         {

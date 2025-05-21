@@ -3,19 +3,19 @@ using UnityEngine.UI;
 
 public class HungerSystem : MonoBehaviour
 {
-    public float maxHunger = 100f; // Максимальная сытость
-    private float currentHunger; // Текущая сытость
+    public float maxHunger = 100f; 
+    private float currentHunger; 
 
-    public float hungerDecreaseRate = 0.1f; // Расход при ходьбе
-    public float jumpCost = 5f; // Расход за прыжок
-    public float dashCost = 10f; // Расход за рывок
+    public float hungerDecreaseRate = 0.1f; 
+    public float jumpCost = 5f; 
+    public float dashCost = 10f; 
 
-    private bool isStarving = false; // Флаг голодания
+    private bool isStarving = false; 
 
     private PlayerDash playerDash;
     private PlayerJump playerJump;
 
-    public Image hungerImage; // Изображение шкалы сытости
+    public Image hungerImage; 
 
     private void Start()
     {

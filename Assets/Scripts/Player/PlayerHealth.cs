@@ -71,7 +71,6 @@ public class PlayerHealth : MonoBehaviour
     private void RestartLevel()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-        // Внимание: GameManager сохранится, а игрок будет перемещён скриптом ниже
     }
 
     public void AddLife()

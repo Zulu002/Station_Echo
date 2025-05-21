@@ -3,8 +3,8 @@ using UnityEngine.UI;
 
 public class HealPoint : MonoBehaviour
 {
-    public GameObject interactionUI; // UI с буквой "E"
-    public AudioClip healSound;      // Звук восстановления
+    public GameObject interactionUI; 
+    public AudioClip healSound;      
     private AudioSource audioSource;
 
     private bool playerInRange = false;
@@ -12,8 +12,8 @@ public class HealPoint : MonoBehaviour
 
     private void Start()
     {
-        interactionUI.SetActive(false); // Скрываем "E" в начале
-        audioSource = GetComponent<AudioSource>(); // Получаем компонент AudioSource с объекта
+        interactionUI.SetActive(false); 
+        audioSource = GetComponent<AudioSource>(); 
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -41,11 +41,11 @@ public class HealPoint : MonoBehaviour
         {
             if (playerHealth != null)
             {
-                playerHealth.RestoreAllLives(); // Восстанавливаем все жизни
+                playerHealth.RestoreAllLives(); 
 
                 if (healSound != null && audioSource != null)
                 {
-                    audioSource.PlayOneShot(healSound); // Проигрываем звук
+                    audioSource.PlayOneShot(healSound); 
                 }
             }
         }

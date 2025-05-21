@@ -33,13 +33,7 @@ public class PauseMenu : MonoBehaviour
 
     public void LoadMainMenu()
     {
-        Time.timeScale = 1f; // на всякий случай
-        SceneManager.LoadScene("MainMenu"); // замените на своё имя сцены меню
-    }
-
-    public void OpenSettings()
-    {
-        Debug.Log("Открыты настройки");
-        // сюда можно активировать UI с настройками
+        Time.timeScale = 1f; 
+        SceneManager.LoadScene("MainMenu"); 
     }
 }

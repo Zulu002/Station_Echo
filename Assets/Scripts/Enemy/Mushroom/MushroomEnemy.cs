@@ -3,20 +3,20 @@ using System.Collections;
 
 public class MushroomEnemy : MonoBehaviour
 {
-    public Transform pointA, pointB; // Точки движения
-    public float speed = 2f; // Скорость передвижения
-    public int damage = 3; // Урон игроку
-    public float waitTime = 2f; // Время ожидания на точках
+    public Transform pointA, pointB; 
+    public float speed = 2f; 
+    public int damage = 3; 
+    public float waitTime = 2f; 
 
-    private Transform targetPoint; // Куда движется гриб
+    private Transform targetPoint; 
     private Animator animator;
-    private bool isWaiting = false; // Флаг, чтобы не двигаться во время ожидания
+    private bool isWaiting = false; 
 
     void Start()
     {
-        targetPoint = pointB; // Начинаем движение к точке B
-        animator = GetComponent<Animator>(); // Получаем аниматор
-        animator.SetBool("isMoving", true); // Запускаем анимацию ходьбы
+        targetPoint = pointB; 
+        animator = GetComponent<Animator>(); 
+        animator.SetBool("isMoving", true); 
     }
 
     void Update()
@@ -49,7 +49,7 @@ public class MushroomEnemy : MonoBehaviour
     private void Flip()
     {
         Vector3 scale = transform.localScale;
-        scale.x *= -1; // Разворачиваем по оси X
+        scale.x *= -1; 
         transform.localScale = scale;
     }
 

@@ -2,9 +2,9 @@
 
 public class PressurePlate : MonoBehaviour
 {
-    public GameObject door; // Ссылка на дверь
-    public AudioClip pressSound; // Звук активации
-    private AudioSource audioSource; // Источник звука
+    public GameObject door; 
+    public AudioClip pressSound; 
+    private AudioSource audioSource; 
 
     private Animator animator;
     private int objectsOnPlate = 0;
@@ -48,7 +48,7 @@ public class PressurePlate : MonoBehaviour
             if (door != null)
                 door.GetComponent<Door>().SetDoorState(isPressed);
 
-            // Воспроизвести звук при активации
+            
             if (isPressed && audioSource != null && pressSound != null)
                 audioSource.PlayOneShot(pressSound);
         }

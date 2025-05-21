@@ -3,9 +3,9 @@ using UnityEngine;
 
 public class BreakableFloor : MonoBehaviour
 {
-    public float disappearTime = 2f; // Время до исчезновения
-    public float respawnTime = 3f; // Время до появления
-    public AudioClip breakSound; // Звук разрушения
+    public float disappearTime = 2f; 
+    public float respawnTime = 3f; 
+    public AudioClip breakSound; 
 
     private bool isBroken = false;
     private Animator animator;
@@ -34,7 +34,7 @@ public class BreakableFloor : MonoBehaviour
         isBroken = true;
         animator.SetTrigger("Activate");
 
-        // Воспроизводим звук
+        
         if (audioSource != null && breakSound != null)
         {
             audioSource.PlayOneShot(breakSound);

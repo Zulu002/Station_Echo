@@ -3,12 +3,12 @@ using UnityEngine;
 
 public class SlimeEnemy : MonoBehaviour
 {
-    public float speed = 2f; // Скорость движения
-    public int maxHealth = 3; // Количество жизней
-    public int damage = 3; // Урон игроку
-    public float aggroRange = 5f; // Радиус агрессии
+    public float speed = 2f; 
+    public int maxHealth = 3; 
+    public int damage = 3; 
+    public float aggroRange = 5f; 
 
-    public LayerMask playerLayer; // Слой игрока
+    public LayerMask playerLayer; 
 
     public AudioClip hitSound;
     public AudioClip deathSound;
@@ -26,12 +26,12 @@ public class SlimeEnemy : MonoBehaviour
         animator = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
         audioSource = GetComponent<AudioSource>();
-        currentHealth = maxHealth; // Устанавливаем полное здоровье
+        currentHealth = maxHealth; 
     }
 
     void Update()
     {
-        if (isDead) return; // Если мертв, не делать ничего
+        if (isDead) return; 
 
         DetectPlayer();
 
@@ -41,7 +41,7 @@ public class SlimeEnemy : MonoBehaviour
         }
         else
         {
-            animator.SetBool("isMoving", false); // Переход в ожидание
+            animator.SetBool("isMoving", false); 
         }
     }
 
@@ -52,7 +52,7 @@ public class SlimeEnemy : MonoBehaviour
         {
             player = detected.transform;
             isAggro = true;
-            animator.SetBool("isMoving", true); // Запускаем анимацию бега
+            animator.SetBool("isMoving", true); 
         }
         else
         {
@@ -62,20 +62,20 @@ public class SlimeEnemy : MonoBehaviour
 
     private void ChasePlayer()
     {
-        // Вычисляем направление к игроку
+        
         Vector2 direction = (player.position - transform.position).normalized;
 
-        // Поворачиваем слайма в сторону игрока
+        
         if (direction.x > 0)
         {
-            transform.localScale = new Vector3(-1, 1, 1); // Поворот вправо
+            transform.localScale = new Vector3(-1, 1, 1); 
         }
         else if (direction.x < 0)
         {
-            transform.localScale = new Vector3(1, 1, 1); // Поворот влево
+            transform.localScale = new Vector3(1, 1, 1); 
         }
 
-        // Двигаемся к игроку
+        
         transform.position = Vector2.MoveTowards(transform.position, player.position, speed * Time.deltaTime);
     }
 
@@ -108,7 +108,7 @@ public class SlimeEnemy : MonoBehaviour
         if (isDead) return;
 
         currentHealth -= damage;
-        animator.SetTrigger("Hit"); // Запускаем анимацию ранения
+        animator.SetTrigger("Hit"); 
 
         if (hitSound != null && audioSource != null)
         {
@@ -127,7 +127,7 @@ public class SlimeEnemy : MonoBehaviour
 
     private IEnumerator RecoverFromHit()
     {
-        yield return new WaitForSeconds(animator.GetCurrentAnimatorStateInfo(0).length); // Ждем завершения анимации "Hit"
+        yield return new WaitForSeconds(animator.GetCurrentAnimatorStateInfo(0).length); 
         animator.ResetTrigger("Hit");
     }
 
@@ -142,12 +142,12 @@ public class SlimeEnemy : MonoBehaviour
             audioSource.PlayOneShot(deathSound);
         }
 
-        animator.SetTrigger("Death"); // Запускаем анимацию смерти
-        rb.linearVelocity = Vector2.zero; // Полностью останавливаем
-        rb.bodyType = RigidbodyType2D.Kinematic; // Отключаем физику
-        GetComponent<Collider2D>().enabled = false; // Отключаем коллайдер
+        animator.SetTrigger("Death"); 
+        rb.linearVelocity = Vector2.zero; 
+        rb.bodyType = RigidbodyType2D.Kinematic; 
+        GetComponent<Collider2D>().enabled = false; 
 
-        Destroy(gameObject, animator.GetCurrentAnimatorStateInfo(0).length); // Удаляем после анимации
+        Destroy(gameObject, animator.GetCurrentAnimatorStateInfo(0).length); 
     }
 
 }

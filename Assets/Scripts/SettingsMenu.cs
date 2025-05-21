@@ -15,7 +15,7 @@ public class SettingsMenu : MonoBehaviour
 
     void Awake()
     {
-        // Устанавливаем разрешение и fullscreen из сохранений при запуске
+        
         int width = PlayerPrefs.GetInt("ResolutionWidth", 1920);
         int height = PlayerPrefs.GetInt("ResolutionHeight", 1080);
         bool isFullscreen = PlayerPrefs.GetInt("Fullscreen", 1) == 1;
@@ -24,7 +24,7 @@ public class SettingsMenu : MonoBehaviour
 
     void Start()
     {
-        // Громкость
+        
         if (volumeSlider != null && audioMixer != null)
         {
             float volume = PlayerPrefs.GetFloat("Volume", 0.75f);
@@ -32,7 +32,7 @@ public class SettingsMenu : MonoBehaviour
             audioMixer.SetFloat("Volume", Mathf.Log10(volume) * 20);
         }
 
-        //  Полноэкранный режим
+        
         if (fullscreenToggle != null)
         {
             bool isFullscreen = PlayerPrefs.GetInt("Fullscreen", 1) == 1;
@@ -40,7 +40,7 @@ public class SettingsMenu : MonoBehaviour
             Screen.fullScreen = isFullscreen;
         }
 
-        // Разрешения
+        
         if (resolutionDropdown != null)
         {
             resolutions = Screen.resolutions;
